@@ -26,7 +26,7 @@
 </head>
 <body class="bg-light text-dark">
     <div class="container-fluid container-header container-main">
-        <img src="./img/university_market_logo1.jpg">
+        <img src="./university_market_logo1.jpg">
     </div>
     
     <hr>
@@ -38,29 +38,15 @@
     <div class="container-fluid">
         <!-- <label for="input-curso">Informe o seu curso</label> -->
         <div class="input-group input-group-lg">
-            <input type="search" id="input-curso" class="form-control" placeholder="O nome do curso vai aqui" aria-label="O nome do curso vai aqui" aria-describedby="btn-search" autocomplete="off">
-            <div class="input-group-append">
-                <button class="btn btn-outline-primary" type="button" id="btn-search">
+            <input list ='curso' type="search" id="input-curso" class="form-control dropdown-toggle" placeholder="O nome do curso vai aqui" aria-label="O nome do curso vai aqui" aria-describedby="btn-search" autocomplete="off">
+                <datalist id="curso" aria-describedby="btn-search" class="dropdown-menu">
+                    <option class="dropdown-item" value="Arquitetura">
+                </datalist>
+                <button class="btn btn-primary " type="button" data-toggle="dropdown">
                     <i class="fas fa-search"></i>
-                </button>
-            </div>
+                </button> 
         </div>
-        <hr>
-        <div class="form-group">
-            <ul class="list-group" id="lista-cursos">
-                <li class="list-group-item ls-curso">Arquitetura</li>
-                <li class="list-group-item ls-curso">Direito</li>
-                <li class="list-group-item ls-curso">Educação física</li>
-                <li class="list-group-item ls-curso">Engenharia de Software</li>
-                <li class="list-group-item ls-curso">Engenharia Elétrica</li>
-                <li class="list-group-item ls-curso">Física</li>
-                <li class="list-group-item ls-curso">Medicina</li>
-                <li class="list-group-item ls-curso">Medicina veterinária</li>
-                <li class="list-group-item ls-curso">Nutrição</li>
-                <li class="list-group-item ls-curso">Odontologia</li>
-                <li class="list-group-item ls-curso">Química</li>
-            </ul>
-          </div>
+
         <!--div class="input-group input-group-lg">
             <select class="custom-select" id="select-curso" aria-label="Example select with button addon">
                 <option selected>Seu curso vai aqui...</option>
@@ -77,7 +63,6 @@
             </div>
         </div-->
     </div>
-    
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
