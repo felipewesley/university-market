@@ -16,4 +16,12 @@ class Anuncio extends CI_Controller {
 		$this->load->view('meus_anuncios');
 		$this->load->view('footer');
 	}
+
+	public function pesquisa_por_curso()
+	{
+		$this->load->view('header');
+		$this->load->view('home');
+		$this->load->view('produtos');
+		$this->load->view('footer');
+	}
 }

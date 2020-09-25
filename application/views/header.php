@@ -70,7 +70,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </button>
                     </div>
                 </div>
-                <div class="modal-body ">
+                <div class="modal-body">
                     <form action="/Login/logado" method="post">
                         <div class="form-group">
                             <label for="email"><h4>Email</h4></label>
@@ -84,8 +84,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <a href="/Login/index">Não tem uma conta? Cadastre-se</a>
                         </div>
                         <hr>
-                        <div class="form-group d-flex justify-content-center" >
-            		    	<input type="submit" name="Login" class="btn btn-primary">
+                        <div class="d-flex justify-content-center" >
+                            <button type="submit" class="btn btn-primary">Login</button>
                         </div>
                     </form>
                 </div>

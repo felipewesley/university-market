@@ -1,18 +1,13 @@
-<div class="container-fluid d-flex justify-content-center ">
+<div class="container-fluid d-flex justify-content-center mt-5">
     <a href="/Welcome/index"><img src="/user_guide/_images/logo.jpg"></a> 
 </div>
-<div class="container">
-     <div class="input-group mb-3">
-        <input list="lista-cursos" stype="search" class="form-control" placeholder="Digite o curso!!!" aria-label="Digite o curso" aria-describedby="btn-search" autofocus>
+<form class="mt-5"action="/Anuncio/pesquisa_por_curso" method="post">
+    <div class="container input-group input-group-lg">
+        <input type="text" class="form-control " placeholder="Digite o curso aqui" aria-label="DigitaCurso" aria-describedby="DigitaCurso">
         <div class="input-group-append">
-            <button class="btn btn-primary" type="button" id="btn-search">
+            <button class="btn btn-primary" aciton = type="button">
                 <i class="fas fa-search"></i>
             </button>
         </div>
     </div>
-    <datalist id="lista-cursos" aria-describedby="btn-search" class="dropdown">
-            <option class="dropdown-item" value="Arquitetura"></option>
-            <option class="dropdown-item" value="Medicina"></option>
-            <option class="dropdown-item" value="Engenharia elétrica"></option>
-    </datalist>
-</div>
+</form>
