@@ -2,8 +2,10 @@
 
 # Init gitignore file
 
-# Remove the application folder of the ignored files/folders
+# Remove the application/* folder of the ignored files/folders
 !application/*
+# Remove the content/* folder of the ignored files/folders
+!content/*
 
 # Ignored files and folders
 system/*
