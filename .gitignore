@@ -1,0 +1,23 @@
+# .DS_Store
+
+# Init gitignore file
+
+# Remove the application folder of the ignored files/folders
+!application/*
+
+# Ignored files and folders
+system/*
+user_guide/*
+index.php
+license.txt
+contributing.md
+
+# CodeIgniter version
+# https://api.github.com/repos/bcit-ci/CodeIgniter/zipball/3.1.11
+
+# IDE Files
+#-------------------------
+/nbproject/
+.idea/*
+
+# End gitignore file
