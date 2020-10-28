@@ -1,0 +1,11 @@
+div.welcome-div {
+    padding: 15px;
+    background: yellow;
+}
+/* Media query para definir o tamanho da tela 
+inicial quando estiver em formato mobile */
+@media only screen and (max-width: 500px) {
+    div.welcome-div {
+        height: calc(100vh - 55px);
+    }
+}
