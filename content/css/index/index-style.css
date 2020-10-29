@@ -3,6 +3,7 @@ div.welcome-div {
     background: yellow;
 }
 nav#navbar-top-desktop {
+    z-index: 0;
     display: flex;
     border-bottom: solid 1px #ccc;
 }
@@ -12,7 +13,7 @@ nav#navbar-bottom-mobile {
 .nav-link {
     border-radius: 7.5px;
     font-size: 0.75em;
-    color: #0275d8;
+    color: #0079fa;
     transition: ease 0.25s;
 }
 .nav-link:hover {
@@ -23,11 +24,11 @@ i.nav-link-icon {
 }
 .active {
     color: #fff;
-    background: #0275d8;
+    background: #0079fa;
 }
 .active:hover {
     color: #000;
-    background: #1893ff;
+    background: #006ee4;
 }
 /* Media query para definir o tamanho da tela 
 inicial quando estiver em formato mobile */
@@ -45,7 +46,7 @@ inicial quando estiver em formato mobile */
     .nav-link {
         border-radius: 7.5px;
         font-size: 1.5em;
-        color: #0275d8;
+        color: #0079fa;
         transition: ease 0.25s;
     }
     .nav-link:hover {
@@ -53,10 +54,10 @@ inicial quando estiver em formato mobile */
     }
     .active {
         color: #fff;
-        background: #0275d8;
+        background: #0079fa;
     }
     .active:hover {
         color: #000;
-        background: #1893ff;
+        background: #006ee4;
     }
 }
