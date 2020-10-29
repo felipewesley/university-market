@@ -49,6 +49,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</div>
 		</div>
 	</nav>
+	<nav class="navbar sticky-top justify-content-center navbar-light navbar-block bg-light" id="navbar-top-desktop">
+		<a class="nav-link active" href="#">
+			<i class="fa fa-home nav-link-icon"></i>
+			HOMEPAGE
+		</a>
+		<a class="nav-link" href="#">
+			<i class="fa fa-search nav-link-icon"></i>
+			PESQUISAR
+		</a>
+		<a class="nav-link" href="#">
+			<i class="fa fa-plus-square nav-link-icon"></i>
+			NOVO
+		</a>
+		<a class="nav-link" href="#">
+			<i class="fa fa-heart nav-link-icon"></i>
+			NOTIFICAÇÕES
+		</a>
+		<a class="nav-link" href="#">
+			<i class="fa fa-user nav-link-icon"></i>
+			PERFIL
+		</a>
+	</nav>
 	
 	<div class="welcome-div">
 		<h1 class="display-4">Hello, world!</h1>
@@ -61,6 +83,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</p>
 		<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
 	</div>
+
+	<nav class="navbar fixed-bottom navbar-light bg-light" id="navbar-bottom-mobile">
+		<a class="nav-link active" href="#">
+			<i class="fa fa-home nav-link-icon"></i>
+		</a>
+		<a class="nav-link" href="#">
+			<i class="fa fa-search nav-link-icon"></i>
+		</a>
+		<a class="nav-link" href="#">
+			<i class="fa fa-plus-square nav-link-icon"></i>
+		</a>
+		<a class="nav-link" href="#">
+			<i class="fa fa-heart nav-link-icon"></i>
+		</a>
+		<a class="nav-link" href="#">
+			<i class="fa fa-user nav-link-icon"></i>
+		</a>
+	</nav>
+
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
 	<!-- Optional JavaScript; choose one of the two! -->
