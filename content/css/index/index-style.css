@@ -1,14 +1,17 @@
 div.welcome-div {
     padding: 15px;
-    background: yellow;
+    background: transparent;
 }
 nav#navbar-top-desktop {
-    z-index: 0;
+    z-index: 90;
     display: flex;
     border-bottom: solid 1px #ccc;
 }
 nav#navbar-bottom-mobile {
     display: none;
+}
+a.navbarDropdownMenuLink .dropdown-menu {
+    z-index: 100;
 }
 .nav-link {
     border-radius: 7.5px;
@@ -29,6 +32,11 @@ i.nav-link-icon {
 .active:hover {
     color: #000;
     background: #006ee4;
+}
+div.top-content .container-fluid div#carousel-example div[role="listbox"] div.active {
+    /* border: solid 2px red; */
+    color: #000;
+    background: transparent;
 }
 /* Media query para definir o tamanho da tela 
 inicial quando estiver em formato mobile */
@@ -60,4 +68,23 @@ inicial quando estiver em formato mobile */
         color: #000;
         background: #006ee4;
     }
+}
+.novidades-title {
+    margin-left: 35px;
+    display: inline-block;
+}
+.novidades-title {
+    width: fit-content;
+}
+.novidades-title-notification-icon {
+    /* display: inline-block; */
+    top: 1px;
+    margin-bottom: 15px;
+}
+p.carousel-item-title {
+    margin-top: 10px;
+}
+p.product-description {
+    font-size: 0.75em;
+    color: #5e5e5e;
 }

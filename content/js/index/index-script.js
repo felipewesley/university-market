@@ -1,1 +1,4 @@
-console.log("Hello world")
+window.onload = function(event) {
+    console.clear()
+    console.error("Hello world in Homepage")
+}
