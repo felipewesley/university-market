@@ -1,11 +1,15 @@
 # .DS_Store
 
+# Comment all lines to sent all files and folders
+
 # Init gitignore file
 
 # Remove the application/* folder of the ignored files/folders
 !application/*
 # Remove the content/* folder of the ignored files/folders
 !content/*
+# Remove the skecth/* folder of the ignored files/folders
+!skecth/*
 
 # Ignored files and folders
 system/*
@@ -19,7 +23,7 @@ contributing.md
 
 # IDE Files
 #-------------------------
-/nbproject/
-.idea/*
+# /nbproject/
+# .idea/*
 
 # End gitignore file
