@@ -77,7 +77,7 @@
 			<i class="fa fa-heart nav-link-icon"></i>
 			NOTIFICAÇÕES
 		</a>
-		<a class="nav-link" href="#">
+		<a class="nav-link" href="./controllers/login.php">
 			<i class="fa fa-user nav-link-icon"></i>
 			PERFIL
 		</a>
