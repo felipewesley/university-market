@@ -1,4 +1,4 @@
-<!--?php defined('BASEPATH') OR exit('No direct script access allowed'); ?-->
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 <!doctype html>
 <html lang="pt-BR">
 <head>
@@ -77,7 +77,7 @@
 			<i class="fa fa-heart nav-link-icon"></i>
 			NOTIFICAÇÕES
 		</a>
-		<a class="nav-link" href="./controllers/login.php">
+		<a class="nav-link" href="/Login/fazerLogin">
 			<i class="fa fa-user nav-link-icon"></i>
 			PERFIL
 		</a>
