@@ -92,104 +92,24 @@
 		<div class="container-fluid">
 			<div id="carousel-example" class="carousel slide" data-ride="carousel">
 				<div class="carousel-inner row w-100 mx-auto" role="listbox">
-					<div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active">
-						<a href="http://www.google.com?img2=true" target="_blank">
-							<img src="./content/images/index/carousel/1.jpg" class="img-fluid mx-auto d-block" alt="img1">
-						</a>
-						<p class="h5 carousel-item-title">Título do elemento 1</p>
-						<p class="product-description text-justify">
-							Esta é uma pequena descrição do produto apresentado neste item de carousel. Aqui serão apresentadas breves informações do produto.
-						</p>
-						<button type="button" class="btn btn-outline-success btn-block">Comprar</button>
-						<button type="button" class="btn btn-primary btn-block">Ver mais</button>
-					</div>
-					<div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-						<a href="http://www.google.com?img2=true" target="_blank">
-							<img src="./content/images/index/carousel/2.jpg" class="img-fluid mx-auto d-block" alt="img1">
-						</a>
-						<p class="h5 carousel-item-title">Título do elemento 2</p>
-						<p class="product-description text-justify">
-							Esta é uma pequena descrição do produto apresentado neste item de carousel. Aqui serão apresentadas breves informações do produto.
-						</p>
-						<button type="button" class="btn btn-outline-success btn-block">Comprar</button>
-						<button type="button" class="btn btn-primary btn-block">Ver mais</button>
-					</div>
-					<div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-						<a href="http://www.google.com?img2=true" target="_blank">
-							<img src="./content/images/index/carousel/3.jpg" class="img-fluid mx-auto d-block" alt="img1">
-						</a>
-						<p class="h5 carousel-item-title">Título do elemento 3</p>
-						<p class="product-description text-justify">
-							Esta é uma pequena descrição do produto apresentado neste item de carousel. Aqui serão apresentadas breves informações do produto.
-						</p>
-						<button type="button" class="btn btn-outline-success btn-block">Comprar</button>
-						<button type="button" class="btn btn-primary btn-block">Ver mais</button>
-					</div>
-					<div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-						<a href="http://www.google.com?img2=true" target="_blank">
-							<img src="./content/images/index/carousel/4.jpg" class="img-fluid mx-auto d-block" alt="img1">
-						</a>
-						<p class="h5 carousel-item-title">Título do elemento 4</p>
-						<p class="product-description text-justify">
-							Esta é uma pequena descrição do produto apresentado neste item de carousel. Aqui serão apresentadas breves informações do produto.
-						</p>
-						<button type="button" class="btn btn-outline-success btn-block">Comprar</button>
-						<button type="button" class="btn btn-primary btn-block">Ver mais</button>
-					</div>
-					<div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-						<a href="http://www.google.com?img2=true" target="_blank">
-							<img src="./content/images/index/carousel/5.jpg" class="img-fluid mx-auto d-block" alt="img1">
-						</a>
-						<p class="h5 carousel-item-title">Título do elemento 5</p>
-						<p class="product-description text-justify">
-							Esta é uma pequena descrição do produto apresentado neste item de carousel. Aqui serão apresentadas breves informações do produto.
-						</p>
-						<button type="button" class="btn btn-outline-success btn-block">Comprar</button>
-						<button type="button" class="btn btn-primary btn-block">Ver mais</button>
-					</div>
-					<div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-						<a href="http://www.google.com?img2=true" target="_blank">
-							<img src="./content/images/index/carousel/6.jpg" class="img-fluid mx-auto d-block" alt="img1">
-						</a>
-						<p class="h5 carousel-item-title">Título do elemento 6</p>
-						<p class="product-description text-justify">
-							Esta é uma pequena descrição do produto apresentado neste item de carousel. Aqui serão apresentadas breves informações do produto.
-						</p>
-						<button type="button" class="btn btn-outline-success btn-block">Comprar</button>
-						<button type="button" class="btn btn-primary btn-block">Ver mais</button>
-					</div>
-					<div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-						<a href="http://www.google.com?img2=true" target="_blank">
-							<img src="./content/images/index/carousel/7.jpg" class="img-fluid mx-auto d-block" alt="img1">
-						</a>
-						<p class="h5 carousel-item-title">Título do elemento 7</p>
-						<p class="product-description text-justify">
-							Esta é uma pequena descrição do produto apresentado neste item de carousel. Aqui serão apresentadas breves informações do produto.
-						</p>
-						<button type="button" class="btn btn-outline-success btn-block">Comprar</button>
-						<button type="button" class="btn btn-primary btn-block">Ver mais</button>
-					</div>
-					<div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-						<a href="http://www.google.com?img2=true" target="_blank">
-							<img src="./content/images/index/carousel/8.jpg" class="img-fluid mx-auto d-block" alt="img1">
-						</a>
-						<p class="h5 carousel-item-title">Título do elemento 8</p>
-						<p class="product-description text-justify">
-							Esta é uma pequena descrição do produto apresentado neste item de carousel. Aqui serão apresentadas breves informações do produto.
-						</p>
-						<button type="button" class="btn btn-outline-success btn-block">Comprar</button>
-						<button type="button" class="btn btn-primary btn-block">Ver mais</button>
-					</div>
-					<!-- <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active">
-						<a href="http://www.google.com?img2=true" target="_blank">
-							<img src="/content/images/index/carousel/1.jpg" class="img-fluid mx-auto d-block" alt="img1">
-						</a>
-					</div> 
-					<div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-						<a href="http://www.google.com?img2=true" target="_blank">
-							<img src="/content/images/index/carousel/2.jpg" class="img-fluid mx-auto d-block" alt="img1">
-						</a>
-					</div> -->
+					
+					<?php for ($index = 1 ; $index <= 8 ; $index++) : ?>
+
+						<?php $active = ($index === 1) ? "active" : ""; ?>
+
+						<div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 <?=$active;?>">
+							<a href="#" target="_self">
+								<img src="./content/images/index/carousel/<?=$index;?>.jpg" class="img-fluid mx-auto d-block" alt="img<?=$index;?>">
+							</a>
+							<p class="h5 carousel-item-title">Título do elemento <?=$index;?></p>
+							<p class="product-description text-justify">
+								Esta é uma pequena descrição do produto <b><?=$index;?></b> apresentado neste item de carousel. Aqui serão apresentadas breves informações do produto.
+							</p>
+							<button type="button" class="btn btn-outline-success btn-block">Comprar</button>
+							<button type="button" class="btn btn-primary btn-block">Ver mais</button>
+						</div>
+
+					<?php endfor; ?>
 				</div>
 				<a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev">
 					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -204,18 +124,71 @@
 	</div> <!-- End carousel item -->
 
 	<hr class="my-4">
-	
-	<div class="welcome-div">
-		<h1 class="display-4">Hello, world!</h1>
-		<p class="lead">
-			This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
-		</p>
-		<hr class="my-4">
-		<p>
-			It uses utility classes for typography and spacing to space content out within the larger container.
-		</p>
-		<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+
+	<!-- Collapse Mais Procurados -->
+	<div class="card text-center">
+		<div class="card-header">
+			<h2>Mais procurados</h2>
+		</div>
+		<div class="card-body">
+
+			<div class="card-group">
+				<?php for ($index = 1 ; $index <= 5 ; $index++) : ?>
+					<!-- <h5 class="card-title">Special title treatment</h5> -->
+					<p class="card-text">
+						<div class="card">
+							<img src="./content/images/index/carousel/<?=rand(1,8);?>.jpg" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">Produto <?=$index;?></h5>
+								<p class="card-text">
+									Breve descrição...
+									<div class="alert alert-success">
+										<strong class="h3"> $<?=rand(10,100);?>.00 </strong>
+									</div>
+								</p>
+								<a href="#" class="btn btn-block btn-primary">Ver produto</a>
+							</div>
+						</div>
+					</p>
+				<?php endfor; ?>
+			</div>
+
+			<button class="btn btn-lg btn-block btn-dark" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" id="mais-procurados-ver-mais-button">
+				Ver mais
+			</button>
+			<div class="collapse" id="collapseExample">
+				<div class="card-group">
+					<?php for ($index = 1 ; $index <= 5 ; $index++) : ?>
+						<!-- <h5 class="card-title">Special title treatment</h5> -->
+						<p class="card-text">
+							<div class="card">
+								<img src="./content/images/index/carousel/<?=rand(1,8);?>.jpg" class="card-img-top" alt="...">
+								<div class="card-body">
+									<h5 class="card-title">Produto <?=$index;?></h5>
+									<p class="card-text">
+										Breve descrição...
+										<div class="alert alert-success">
+											<strong class="h3"> $<?=rand(10,100);?>.00 </strong>
+										</div>
+									</p>
+									<a href="#" class="btn btn-block btn-primary">Ver produto</a>
+								</div>
+							</div>
+						</p>
+					<?php endfor; ?>
+				</div>
+				
+				<button class="btn btn-lg btn-block btn-primary" type="button">
+					Ver todos mais procurados
+				</button>
+				
+			</div>
+		</div>
+		<div class="card-footer text-muted">
+			In last day
+		</div>
 	</div>
+<!-- End Collapse Mais Procurados -->
 
 
 	<!-- Responsive menu model navbar -->
