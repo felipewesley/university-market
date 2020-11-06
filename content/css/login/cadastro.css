@@ -9,9 +9,6 @@ body{
 
   background-color:white;
 }
-
-
-
 /* remove a linha dos links */
 a{
   text-decoration: none;
@@ -29,7 +26,7 @@ a.links{
 }
 h1{
   font-size: 48px;
-  color: black;
+  color: #066a75;
   padding: 2px 0 10px 0;
   font-family: Arial,sans-serif;
   font-weight: bold;
@@ -64,7 +61,7 @@ label{
 }
 input:-moz-placeholder,
 textarea:-moz-placeholder{
-  color: #bebcbc;
+  color: green;
   font-style: italic;
 }
 input {
@@ -178,54 +175,3 @@ input[type="submit"]:hover{
   animation-delay: .1s;
 }
  
-/* Efeito ao clicar no botão ( Cadastre-se ) */
-#registro:target ~ .content #login,
-#paralogin:target ~ .content #cadastro{
-  -webkit-animation-name: fadeOutLeft;
-  animation-name: fadeOutLeft;
-}
-/*fadeInLeft*/
-@-webkit-keyframes fadeInLeft {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(-20px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-  }
-}
- 
-@keyframes fadeInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
- 
-/*fadeOutLeft*/
-@-webkit-keyframes fadeOutLeft {
-  0% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: translateX(-20px);
-  }
-}
- 
-@keyframes fadeOutLeft {
-  0% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-}
