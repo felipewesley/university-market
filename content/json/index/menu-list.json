@@ -1,0 +1,30 @@
+{
+    "$menuList": [
+        {
+            "title": "HOMEPAGE",
+            "icon": "fa fa-home",
+            "href": "/",
+            "help": "Go to homepage"
+        }, {
+            "title": "PESQUISAR",
+            "icon": "fa fa-search",
+            "href": "/",
+            "help": "Search anything..."
+        }, {
+            "title": "NOVO",
+            "icon": "fa fa-plus-square",
+            "href": "/",
+            "help": "Create a new post"
+        }, {
+            "title": "NOTIFICAÇÕES",
+            "icon": "fa fa-heart",
+            "href": "/",
+            "help": "Your notifications"
+        }, {
+            "title": "PROFILE",
+            "icon": "fa fa-user",
+            "href": "/",
+            "help": "Your profile"
+        }
+    ]
+}

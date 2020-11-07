@@ -88,3 +88,6 @@ p.product-description {
     font-size: 0.75em;
     color: #5e5e5e;
 }
+footer.page-footer, footer.page-footer a {
+    color: #fff;
+}
