@@ -68,6 +68,9 @@ inicial quando estiver em formato mobile */
         color: #000;
         background: #006ee4;
     }
+    footer.page-footer {
+        height: 100vh;
+    }
 }
 .novidades-title {
     margin-left: 35px;
@@ -90,4 +93,8 @@ p.product-description {
 }
 footer.page-footer, footer.page-footer a {
     color: #fff;
+}
+div.container-mais-procurados {
+    width: 100%;
+    /* display: inline-block; */
 }
