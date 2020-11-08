@@ -85,8 +85,10 @@
 							<p class="product-description text-justify">
 								Esta é uma pequena descrição do produto <b><?=$index;?></b> apresentado neste item de carousel. Aqui serão apresentadas breves informações do produto.
 							</p>
-							<button type="button" class="btn btn-outline-success btn-block">Comprar</button>
-							<button type="button" class="btn btn-primary btn-block">Ver mais</button>
+							<div class="alert alert-success text-center">
+								<strong class="h3"> $<?=rand(10,100);?>.<?=rand(0,9);?>0 </strong>
+							</div>
+							<button type="button" class="btn btn-primary btn-block">Ver produto</button>
 						</div>
 
 					<?php endfor; ?>
@@ -108,29 +110,14 @@
 	<!-- Collapse Mais Procurados -->
 	<div class="card text-center">
 		<div class="card-header">
-			<h2>Mais procurados</h2>
+			<h2>Busca por curso</h2>
 		</div>
 		<div class="card-body">
 
 			<div class="card-group">
-				<?php for ($index = 1 ; $index <= 5 ; $index++) : ?>
-					<!-- <h5 class="card-title">Special title treatment</h5> -->
-					<p class="card-text">
-						<div class="card">
-							<img src="./content/images/index/carousel/<?=rand(1,8);?>.jpg" class="card-img-top" alt="...">
-							<div class="card-body">
-								<h5 class="card-title">Produto <?=$index;?></h5>
-								<p class="card-text">
-									Breve descrição...
-									<div class="alert alert-success">
-										<strong class="h3"> $<?=rand(10,100);?>.00 </strong>
-									</div>
-								</p>
-								<a href="#" class="btn btn-block btn-primary">Ver produto</a>
-							</div>
-						</div>
-					</p>
-				<?php endfor; ?>
+
+				<?php require_once "nome_cursos.php"; ?>
+
 			</div>
 
 			<button class="btn btn-lg btn-block btn-dark" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" id="mais-procurados-ver-mais-button">
@@ -175,32 +162,35 @@
 		<div class="container-fluid text-center text-md-left">
 			<div class="row">
 				<div class="col-md-6 mt-md-0 mt-3">
-					<h5 class="text-uppercase">Footer Content</h5>
-					<p>Here you can use rows and columns to organize your footer content.</p>
+					<h5 class="text-uppercase">University Market</h5>
+					<p>
+						Este é um trabalho semestral multidisciplinar.
+					</p>
 				</div>
 				<hr class="clearfix w-100 d-md-none pb-3">
 				<div class="col-md-3 mb-md-0 mb-3">
-					<h5 class="text-uppercase">Links</h5>
+					<h5 class="text-uppercase">Esta plataforma</h5>
 					<ul class="list-unstyled">
-						<li> <a href="#!">Link 1</a> </li>
-						<li> <a href="#!">Link 2</a> </li> 
-						<li> <a href="#!">Link 3</a> </li>
-						<li> <a href="#!">Link 4</a> </li>
+						<li> <a href="#!">Sobre o University Market</a> </li>
+						<li> <a href="#!">Política de privacidade</a> </li>
+						<li> <a href="#!">Tratamento de dados</a> </li>
+						<li> <a href="#!">Dados do aplicativo</a> </li>
 					</ul>
 				</div>
 				<div class="col-md-3 mb-md-0 mb-3">
-					<h5 class="text-uppercase">Links</h5>
+					<h5 class="text-uppercase">Projeto</h5>
 					<ul class="list-unstyled">
-						<li> <a href="#!">Link 1</a> </li>
-						<li> <a href="#!">Link 2</a> </li> 
-						<li> <a href="#!">Link 3</a> </li>
-						<li> <a href="#!">Link 4</a> </li>
+						<li> <a href="#!">GitHub</a> </li>
+						<li> <a href="#!">Enviar e-mail</a> </li>
+						<li> <a href="#!">Universidade</a> </li>
 					</ul>
 				</div>
 			</div>
 		</div>
 		<div class="footer-copyright text-center py-3">
-			<a href="https://mdbootstrap.com/" class="h5">University Market Group</a>
+			<a href="https://github.com/felipewesley/university-market" target="_blank" class="h5">
+				University Market Group
+			</a>
 			<hr class="my-4">
 			<p> 2020 &copy; All rights reserved. </p>
 		</div>
