@@ -39,6 +39,7 @@
           <p> 
             <input type="submit" value="cadastrar" /> 
           </p>
+           Já tem um login? <a href="/Login/fazerLogin">Clique aqui</a>
         </form>
       </div>
  

@@ -2,11 +2,9 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 require_once('bancoteste.php');
 
-class Login extends CI_Controller {
+class Login extends CI_Controller{
 
-	public $senha;
-	$s = new bancoteste();
-
+	
 	public function fazerLogin() {
 
 		$this->load->view('login');
@@ -16,20 +14,23 @@ class Login extends CI_Controller {
 		$this->load->view('cadastro');
 	}
 	public function conf_login() {
+		//$this->load->library('session');
+		$this->load->model('usuario_model');
+		$username = $_POST['nome_login'];
+		$user = $this->usuario_model->logarUsuarios($username);
 
-		$confirmacao = $this->input->post('senha_login');
-		//echo "senha " . $this->senha;
-		//echo "confirmacao " . $confirmacao;
-		if ($s->getsenha() == $confirmacao) {
+
+		//var_dump($user);
+		if ($user == TRUE) {
 			$this->load->view('welcome_message');
 		}else{
+			//$this->session->set_flashdata('danger', 'Senha invalida!');
+			$this->load->view('login');		
+		}
 			
-			$this->load->view('login');
-		
-		}	
 	}
 	public function save_cad(){
-		$s->setsenha($this->input->post('senha_cad'));
+		$se.setsenha($this->input->post('senha_cad'));
 		$this->load->view('login');	
 	}
 
