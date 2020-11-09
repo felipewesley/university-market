@@ -1,31 +1,51 @@
 <?php $cursos = [
-    "Engenharia elétrica", 
-    "Medicina",
-    "Arquitetura",
-    "Serviço social",
-    "Análise e desenvolvimento de sistemas",
-    "Odontologia",
-    "Engenharia de software",
     "Administração",
-    "Direito",
-    "Farmácia",
+    "Análise e desenvolvimento de sistemas",
+    "Arquitetura",
+    "Biologia",
     "Ciência da computação",
-    "Recursos humanos",
+    "Contabilidade",
+    "Direito",
+    "Economia",
+    "Educação física",
+    "Engenharia civil",
+    "Engenharia da produção",
+    "Engenharia de software",
+    "Engenharia elétrica",
     "Engenharia mecânica",
-    "Filosofia"
+    "Farmácia",
+    "Filosofia",
+    "Física",
+    "Gastronomia",
+    "Geografia",
+    "Letras",
+    "Matemática",
+    "Medicina",
+    "Música",
+    "Nutrição",
+    "Odontologia",
+    "Pedagogia",
+    "Psicologia",
+    "Química",
+    "Recursos humanos",
+    "Relações internacionais",
+    "Serviço social"
 ]; ?>
 
 <div class="card-columns">
 
-    <?php for ($index = 0 ; $index < 6 ; $index++) : ?>
+    <?php for ($index = 0 ; $index < 9 ; $index++) : ?>
 
         <?php $col = $index%2 ? "" : "p-3"; ?>
-        <div class="card card-curso-img <?=$col;?>">
+        <?php $curso = $cursos[rand(0,count($cursos)-1)]; ?>
+        <div class="card card-curso <?=$col;?>">
             <!-- <img src="..." class="card-img-top" alt="..."> -->
             <div class="card-body">
-                <h5 class="card-title"><?=$cursos[rand(0,count($cursos)-1)];?></h5>
-                <p class="card-text">
-                    This card has supporting text below as a natural lead-in to additional content.
+                <h1 class="h2 curso-name">
+                    <?=$curso;?>
+                </h1>
+                <p class="card-text text-left curso-description">
+                    Breve descrição geral de alguns materiais referentes ao curso de <?=$curso;?>.
                 </p>
             </div>
         </div>

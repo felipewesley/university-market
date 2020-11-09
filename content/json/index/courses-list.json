@@ -1,0 +1,65 @@
+{
+    "$courses": [
+        {
+            "id": 1,
+            "name": "Administração",
+            "bg_name": "administracao",
+            "description": "Calculadora financeira, livros da teoria geral da administração, etc."
+        }, {
+            "id": 2,
+            "name": "Análise e desenvolvimento de sistemas",
+            "bg_name": "ads",
+            "description": "Computadores, livros de programação orientada à objetos, livro de MVC e MVVM, etc."
+        }, {
+            "id": 3,
+            "name": "Arquitetura e urbanismo",
+            "bg_name": "arquitetura",
+            "description": "Materiais para o curso de arquitetura e urbanismo."
+        }, {
+            "id": 4,
+            "name": "Biologia",
+            "bg_name": "biologia",
+            "description": "Materiais para o curso de biologia, etc."
+        }, {
+            "id": 5,
+            "name": "Biologia",
+            "bg_name": "biologia",
+            "description": "Materiais para o curso de biologia, etc."
+        }, {
+            "id": 6,
+            "name": "Ciência da computação",
+            "bg_name": "ciencia_computacao",
+            "description": "Materiais para ciência da computação, livro de sistemas operacionais, compiladores, etc."
+        }, {
+            "id": 7,
+            "name": "Contabilidade",
+            "bg_name": "contabilidade",
+            "description": "Materiais para o curso de contabilidade, calculadora matemática, etc."
+        }, {
+            "id": 8,
+            "name": "Direito",
+            "bg_name": "direito",
+            "description": "Vade Mecum, Constituição brasileira, códigos penais, civis, etc."
+        }, {
+            "id": 9,
+            "name": "Economia",
+            "bg_name": "economia",
+            "description": "Materiais para o curso de economia, apostila de aplicação de impostos 2019, etc."
+        }, {
+            "id": 10,
+            "name": "Educação física",
+            "bg_name": "educacao_fisica",
+            "description": "Kit treino, atlas do corpo humano, etc."
+        }, {
+            "id": 11,
+            "name": "Engenharia civil",
+            "bg_name": "eng_civil",
+            "description": "Materiais para o curso de engenharia civil, etc."
+        }, {
+            "id": 12,
+            "name": "Engenharia da produção",
+            "bg_name": "eng_producao",
+            "description": "Materiais para o curso de biologia, etc."
+        }
+    ]
+}

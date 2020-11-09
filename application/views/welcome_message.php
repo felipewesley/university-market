@@ -114,46 +114,51 @@
 		</div>
 		<div class="card-body">
 
+			
+
 			<div class="card-group">
-
-				<?php require_once "nome_cursos.php"; ?>
-
+				<div class="container-fluid">
+					<?php require_once "list_primary_courses.php"; ?>
+				</div>
 			</div>
 
 			<button class="btn btn-lg btn-block btn-dark" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" id="mais-procurados-ver-mais-button">
-				Ver mais
+				Ver mais cursos
 			</button>
 			<div class="collapse" id="collapseExample">
 				<div class="card-group">
-					<?php for ($index = 1 ; $index <= 5 ; $index++) : ?>
-						<!-- <h5 class="card-title">Special title treatment</h5> -->
-						<p class="card-text">
-							<div class="card">
-								<img src="./content/images/index/carousel/<?=rand(1,8);?>.jpg" class="card-img-top" alt="...">
-								<div class="card-body">
-									<h5 class="card-title">Produto <?=$index;?></h5>
-									<p class="card-text">
-										Breve descrição...
-										<div class="alert alert-success">
-											<strong class="h3"> $<?=rand(10,100);?>.00 </strong>
-										</div>
-									</p>
-									<a href="#" class="btn btn-block btn-primary">Ver produto</a>
+					<div class="container-fluid">
+					
+						<div class="card-columns">
+							<?php for ($index = 0 ; $index < count($cursos) ; $index++) : ?>
+
+								<?php $col = $index%2 ? "" : "p-3"; ?>
+								<?php $curso = $cursos[rand(0,count($cursos)-1)]; ?>
+								<div class="card card-curso <?=$col;?>">
+									<!-- <img src="..." class="card-img-top" alt="..."> -->
+									<div class="card-body">
+										<h1 class="h2 curso-name">
+											<?=$curso;?>
+										</h1>
+										<p class="card-text text-left curso-description">
+											Breve descrição de alguns materiais referentes ao curso de <?=$curso;?>.
+										</p>
+									</div>
 								</div>
-							</div>
-						</p>
-					<?php endfor; ?>
+							<?php endfor; ?>
+
+						</div>
+
+					</div>
 				</div>
 				
 				<button class="btn btn-lg btn-block btn-primary" type="button">
-					Ver todos mais procurados
+					Ver todos os cursos
 				</button>
 				
 			</div>
 		</div>
-		<div class="card-footer text-muted">
-			In last day
-		</div>
+		<!-- <div class="card-footer text-muted"> In last day </div> -->
 	</div>
 	<!-- End Collapse Mais Procurados -->
 
