@@ -29,11 +29,19 @@ class Usuario_model extends CI_Model
         return $this->db->delete('usuario', ['id_usuario' => $id]);
     }
 
-    public function logarUsuarios($username)
+    public function logarUsuarios($username,$senha)
     {
-        return $this->db->get_where('usuario', array ('nome' => $username))->result();
+        //return $this->db->get_where('usuario', array ('nome' => $username))->result();
+            if($this->db->get_where('usuario', array ('nome' => $username))->result() == $username){
+                if($this->db->get_where('usuario', array ('senha' => $senha))->result() == $senha){
+                    return true;
+                }else{
+                    return false;
+                }
+            }else{
+                return false;
+            }
         //$senha =$this->db->get_where('usuario', ['senha' => $senha]);
-        //$email =$this->db->get_where('usuario', ['email' => $email]);
         //return $usuario()->result();
          
     }
