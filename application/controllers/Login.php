@@ -13,11 +13,13 @@ class Login extends CI_Controller{
 
 		$this->load->view('cadastro');
 	}
+
 	public function conf_login() {
 		//$this->load->library('session');
 		$this->load->model('usuario_model');
 		$username = $_POST['nome_login'];
-		$user = $this->usuario_model->logarUsuarios($username);
+		$senha = $_POST['senha_login'];
+		$user = $this->usuario_model->autenticar($username,$senha);
 
 
 		//var_dump($user);
@@ -29,8 +31,19 @@ class Login extends CI_Controller{
 		}
 			
 	}
+	
 	public function save_cad(){
-		$se.setsenha($this->input->post('senha_cad'));
+		
+		$this->load->model('usuario_model');
+
+		$dados = array(
+        'nome' => $this->input->post('nome_cad'),
+        'senha' => $this->input->post('senha_cad'),
+        'email' => $this->input->post('email_cad'),
+        'telefone' => $this->input->post('cel_cad'),
+        'nascimento' => $this->input->post('nasc_cad'),
+    	);   
+    	$this->usuario_model->insere($dados);
 		$this->load->view('login');	
 	}
 

