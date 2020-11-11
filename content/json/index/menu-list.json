@@ -23,7 +23,7 @@
         }, {
             "title": "PROFILE",
             "icon": "fa fa-user",
-            "href": "/",
+            "href": "./Login/fazerLogin",
             "help": "Your profile"
         }
     ]

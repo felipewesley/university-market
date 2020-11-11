@@ -1,65 +1,60 @@
 {
-    "$courses": [
+    "courses": [
         {
             "id": 1,
             "name": "Administração",
-            "bg_name": "administracao",
+            "bg_path": "/content/images/index/cursos_background/default.jpg",
             "description": "Calculadora financeira, livros da teoria geral da administração, etc."
         }, {
             "id": 2,
             "name": "Análise e desenvolvimento de sistemas",
-            "bg_name": "ads",
+            "bg_path": "/content/images/index/cursos_background/default.jpg",
             "description": "Computadores, livros de programação orientada à objetos, livro de MVC e MVVM, etc."
         }, {
             "id": 3,
             "name": "Arquitetura e urbanismo",
-            "bg_name": "arquitetura",
+            "bg_path": "/content/images/index/cursos_background/default.jpg",
             "description": "Materiais para o curso de arquitetura e urbanismo."
         }, {
             "id": 4,
             "name": "Biologia",
-            "bg_name": "biologia",
+            "bg_path": "/content/images/index/cursos_background/default.jpg",
             "description": "Materiais para o curso de biologia, etc."
         }, {
             "id": 5,
-            "name": "Biologia",
-            "bg_name": "biologia",
-            "description": "Materiais para o curso de biologia, etc."
-        }, {
-            "id": 6,
             "name": "Ciência da computação",
-            "bg_name": "ciencia_computacao",
+            "bg_path": "/content/images/index/cursos_background/default.jpg",
             "description": "Materiais para ciência da computação, livro de sistemas operacionais, compiladores, etc."
         }, {
-            "id": 7,
+            "id": 6,
             "name": "Contabilidade",
-            "bg_name": "contabilidade",
+            "bg_path": "/content/images/index/cursos_background/default.jpg",
             "description": "Materiais para o curso de contabilidade, calculadora matemática, etc."
         }, {
-            "id": 8,
+            "id": 7,
             "name": "Direito",
-            "bg_name": "direito",
+            "bg_path": "/content/images/index/cursos_background/default.jpg",
             "description": "Vade Mecum, Constituição brasileira, códigos penais, civis, etc."
         }, {
-            "id": 9,
+            "id": 8,
             "name": "Economia",
-            "bg_name": "economia",
+            "bg_path": "/content/images/index/cursos_background/default.jpg",
             "description": "Materiais para o curso de economia, apostila de aplicação de impostos 2019, etc."
         }, {
-            "id": 10,
+            "id": 9,
             "name": "Educação física",
-            "bg_name": "educacao_fisica",
+            "bg_path": "/content/images/index/cursos_background/default.jpg",
             "description": "Kit treino, atlas do corpo humano, etc."
         }, {
-            "id": 11,
+            "id": 10,
             "name": "Engenharia civil",
-            "bg_name": "eng_civil",
+            "bg_path": "/content/images/index/cursos_background/default.jpg",
             "description": "Materiais para o curso de engenharia civil, etc."
         }, {
-            "id": 12,
+            "id": 11,
             "name": "Engenharia da produção",
-            "bg_name": "eng_producao",
-            "description": "Materiais para o curso de biologia, etc."
+            "bg_path": "/content/images/index/cursos_background/default.jpg",
+            "description": "Materiais para o curso de engenharia da produção, livros, etc."
         }
     ]
 }

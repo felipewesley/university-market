@@ -59,6 +59,12 @@
 			</div>
 		</div>
 	</nav>
+
+	<?php
+
+	print_r($cursos);
+
+	?>
 	
 	<!-- Desktop menu model navbar -->
 	<nav id="navbar-top-desktop"></nav>
@@ -118,7 +124,30 @@
 
 			<div class="card-group">
 				<div class="container-fluid">
-					<?php require_once "list_primary_courses.php"; ?>
+				<div class="card-columns">
+							<?php $index = 0; ?>
+							<?php foreach ($cursos as $c) : ?>
+
+								<?php $col = $index%2 ? "" : "p-3"; ?>
+
+								<div class="card card-curso <?=$col;?>" style="background: url('<?=$c->bg_path;?>');">
+									<!-- <img src="..." class="card-img-top" alt="..."> -->
+									<div class="card-body">
+										<h1 class="h2 curso-name">
+											<?=$c->name;?>
+										</h1>
+										<p class="card-text text-left curso-description">
+											<?=$c->description;?>
+										</p>
+									</div>
+								</div>
+
+								<?php $index++; ?>
+								<?php if ($index >= 10) { break; } ?>
+							<?php endforeach; ?>
+
+						</div>
+					<!--?php require_once "list_primary_courses.php"; ?-->
 				</div>
 			</div>
 
@@ -130,22 +159,23 @@
 					<div class="container-fluid">
 					
 						<div class="card-columns">
-							<?php for ($index = 0 ; $index < count($cursos) ; $index++) : ?>
+							<?php $index = 0; ?>
+							<?php foreach ($cursos as $curso_e) : ?>
 
 								<?php $col = $index%2 ? "" : "p-3"; ?>
-								<?php $curso = $cursos[rand(0,count($cursos)-1)]; ?>
-								<div class="card card-curso <?=$col;?>">
+								<div class="card card-curso <?=$col;?>" data-target="<?=$curso_e;?>">
 									<!-- <img src="..." class="card-img-top" alt="..."> -->
 									<div class="card-body">
 										<h1 class="h2 curso-name">
-											<?=$curso;?>
+											<!--?=$curso->id.$curso->name;?-->
 										</h1>
 										<p class="card-text text-left curso-description">
-											Breve descrição de alguns materiais referentes ao curso de <?=$curso;?>.
+											<!--?=$curso->description;?-->
 										</p>
 									</div>
 								</div>
-							<?php endfor; ?>
+								<?php $index++; ?>
+							<?php endforeach; ?>
 
 						</div>
 

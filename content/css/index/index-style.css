@@ -109,17 +109,18 @@ div.container-mais-procurados {
     width: 100%;
     height: 100%;
     background-position: center;
-    background: url("/content/images/index/carousel/1.jpg");
+    /* background: url("/content/images/index/carousel/1.jpg"); */
+    /* background: attr(data-image-src url); */
     /* background-size: cover; */
     background-repeat: no-repeat;
     transition: ease 0.25s;
     cursor: pointer;
-    color: #fff;
+    color: #000;
 }
 .card-curso:hover {
     filter: brightness(130%);
     /* transform: scale(1.15); */
 }
 .card-curso p.curso-description {
-    color: #d8d8d8;
+    color: #3e3e3e;
 }
