@@ -112,15 +112,21 @@ div.container-mais-procurados {
     /* background: url("/content/images/index/carousel/1.jpg"); */
     /* background: attr(data-image-src url); */
     /* background-size: cover; */
+    /* filter: opacity(80%); */
+    filter: opacity(0.75);
     background-repeat: no-repeat;
     transition: ease 0.25s;
     cursor: pointer;
     color: #000;
 }
 .card-curso:hover {
-    filter: brightness(130%);
+    /* filter: brightness(130%); */
+    filter: opacity(1);
+    /* filter: opacity(100%); */
+    /* color: #000; */
     /* transform: scale(1.15); */
 }
 .card-curso p.curso-description {
-    color: #3e3e3e;
+    color: #161616;
+    filter: drop-shadow(0px 0px 1px rgba(255, 255, 255, 1));
 }

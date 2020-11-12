@@ -16,7 +16,7 @@ class Homepage extends CI_Model {
             $arr = [];
             $arr['id'] = $curso->id;
             $arr['name'] = $curso->name;
-            $arr['bg_path'] = $curso->bg_path;
+            $arr['bg_path'] = "/content/images/index/cursos_background/$curso->bg_path";
             $arr['description'] = $curso->description;
             
             $c[] = $arr;

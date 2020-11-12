@@ -1,4 +1,8 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+<?php
+	define("CURSOS_QUANT_MIN", 3);
+	define("CURSOS_QUANT_MAX", 10);
+?>
 <!doctype html>
 <html lang="pt-BR">
 <head>
@@ -119,10 +123,10 @@
 			<div class="card-group">
 				<div class="container-fluid">
 				<div class="card-columns">
-							<?php $index = 0; ?>
+							<?php $loop = 0; ?>
 							<?php foreach ($cursos as $c) : ?>
 
-								<?php $col = $index%2 ? "" : "p-3"; ?>
+								<?php $col = $loop%2 ? "" : "p-3"; ?>
 
 								<div class="card card-curso <?=$col;?>" style="background: url('<?=$c['bg_path'];?>');">
 									<!-- <img src="..." class="card-img-top" alt="..."> -->
@@ -136,8 +140,8 @@
 									</div>
 								</div>
 
-								<?php $index++; ?>
-								<?php if ($index >= 10) { break; } ?>
+								<?php $loop++; ?>
+								<?php if ($loop >= CURSOS_QUANT_MIN) { break; } ?>
 							<?php endforeach; ?>
 
 						</div>
@@ -153,23 +157,24 @@
 					<div class="container-fluid">
 					
 						<div class="card-columns">
-							<?php $index = 0; ?>
-							<?php foreach ($cursos as $curso_e) : ?>
+							<?php for($index = CURSOS_QUANT_MIN ; $index < CURSOS_QUANT_MAX ; $index++) : ?>
 
+								<?php $curso_e = $cursos[$index]; ?>
 								<?php $col = $index%2 ? "" : "p-3"; ?>
-								<div class="card card-curso <?=$col;?>" data-target="<?=$curso_e['name'];?>">
+
+								<div class="card card-curso <?=$col;?>" style="background: url('<?=$curso_e['bg_path'];?>');">
 									<!-- <img src="..." class="card-img-top" alt="..."> -->
 									<div class="card-body">
 										<h1 class="h2 curso-name">
-											<!--?=$curso->id.$curso->name;?-->
+											<?=$curso_e['name'];?>
 										</h1>
 										<p class="card-text text-left curso-description">
-											<!--?=$curso->description;?-->
+											<?=$curso_e['description'];?>
 										</p>
 									</div>
 								</div>
-								<?php $index++; ?>
-							<?php endforeach; ?>
+								
+							<?php endfor; ?>
 
 						</div>
 

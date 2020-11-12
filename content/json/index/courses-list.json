@@ -3,58 +3,113 @@
         {
             "id": 1,
             "name": "Administração",
-            "bg_path": "/content/images/index/cursos_background/default.jpg",
+            "bg_path": "default.jpg",
             "description": "Calculadora financeira, livros da teoria geral da administração, etc."
         }, {
             "id": 2,
             "name": "Análise e desenvolvimento de sistemas",
-            "bg_path": "/content/images/index/cursos_background/default.jpg",
+            "bg_path": "default.jpg",
             "description": "Computadores, livros de programação orientada à objetos, livro de MVC e MVVM, etc."
         }, {
             "id": 3,
             "name": "Arquitetura e urbanismo",
-            "bg_path": "/content/images/index/cursos_background/default.jpg",
+            "bg_path": "default.jpg",
             "description": "Materiais para o curso de arquitetura e urbanismo."
         }, {
             "id": 4,
             "name": "Biologia",
-            "bg_path": "/content/images/index/cursos_background/default.jpg",
+            "bg_path": "default.jpg",
             "description": "Materiais para o curso de biologia, etc."
         }, {
             "id": 5,
             "name": "Ciência da computação",
-            "bg_path": "/content/images/index/cursos_background/default.jpg",
+            "bg_path": "default.jpg",
             "description": "Materiais para ciência da computação, livro de sistemas operacionais, compiladores, etc."
         }, {
             "id": 6,
             "name": "Contabilidade",
-            "bg_path": "/content/images/index/cursos_background/default.jpg",
+            "bg_path": "default.jpg",
             "description": "Materiais para o curso de contabilidade, calculadora matemática, etc."
         }, {
             "id": 7,
             "name": "Direito",
-            "bg_path": "/content/images/index/cursos_background/default.jpg",
+            "bg_path": "default.jpg",
             "description": "Vade Mecum, Constituição brasileira, códigos penais, civis, etc."
         }, {
             "id": 8,
             "name": "Economia",
-            "bg_path": "/content/images/index/cursos_background/default.jpg",
+            "bg_path": "default.jpg",
             "description": "Materiais para o curso de economia, apostila de aplicação de impostos 2019, etc."
         }, {
             "id": 9,
             "name": "Educação física",
-            "bg_path": "/content/images/index/cursos_background/default.jpg",
+            "bg_path": "default.jpg",
             "description": "Kit treino, atlas do corpo humano, etc."
         }, {
             "id": 10,
             "name": "Engenharia civil",
-            "bg_path": "/content/images/index/cursos_background/default.jpg",
+            "bg_path": "default.jpg",
             "description": "Materiais para o curso de engenharia civil, etc."
         }, {
             "id": 11,
             "name": "Engenharia da produção",
-            "bg_path": "/content/images/index/cursos_background/default.jpg",
+            "bg_path": "default.jpg",
             "description": "Materiais para o curso de engenharia da produção, livros, etc."
+        }, {
+            "id": 12,
+            "name": "Engenharia de software",
+            "bg_path": "default.jpg",
+            "description": "Materiais para o curso de engenharia de software, livros de Pressman e Sommerville, etc."
+        }, {
+            "id": 13,
+            "name": "Engenharia elétrica",
+            "bg_path": "default.jpg",
+            "description": "Transistores, capacitores, conversores, amperímetro e voltímetro, arduíno, livro de Sistemas Operacionais de Tenembaum, etc."
+        }, {
+            "id": 14,
+            "name": "Engenharia mecânica",
+            "bg_path": "default.jpg",
+            "description": "Peugeot 208 para praticar."
+        }, {
+            "id": 15,
+            "name": "Farmácia",
+            "bg_path": "default.jpg",
+            "description": "Apostilas e livros de manipulação de elementos químicos, equilíbrio da camada de equivalência de metais alcalinos, como colocar crédito, etc."
+        }, {
+            "id": 16,
+            "name": "Filosofia",
+            "bg_path": "default.jpg",
+            "description": "Book de Teorias do evolucionismo, mitologia grega e nórdica, início da filosofia e idade comtemporânea."
+        }, {
+            "id": 17,
+            "name": "Física",
+            "bg_path": "default.jpg",
+            "description": "As leis de Newton, livros da teoria da relatividade, etc."
+        }, {
+            "id": 18,
+            "name": "Gastronomia",
+            "bg_path": "default.jpg",
+            "description": "Livros de culinária italiana, temperos, etc."
+        }, {
+            "id": 19,
+            "name": "Geografia",
+            "bg_path": "default.jpg",
+            "description": "Modelo hidrográfico nacional brasileiro, artigos científicos da evolução do aquecimento global e degradação da camada de ozônio."
+        }, {
+            "id": 20,
+            "name": "Letras",
+            "bg_path": "default.jpg",
+            "description": "Literatura brasileira, livros de poesias trovadorescas, Machado de Assis, Romeu e Julieta e outros clássicos."
+        }, {
+            "id": 21,
+            "name": "Matemática",
+            "bg_path": "default.jpg",
+            "description": "Teoria dos números complexos, livros de aplicação prática de integrais e derivadas, geometria plana e espacial, teoremas de Pitágoras, Thales e outros."
+        }, {
+            "id": 22,
+            "name": "Medicina",
+            "bg_path": "default.jpg",
+            "description": "Conteúdo e materiais sobre medicina, livros, artigos e outros."
         }
     ]
 }
