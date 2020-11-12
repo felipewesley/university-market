@@ -9,7 +9,20 @@ class Homepage extends CI_Model {
         $file_path = "./content/json/index/courses-list.json";
         $cursos = json_decode(file_get_contents($file_path));
 
-        return $cursos->courses;
+        $c = [];
+
+        foreach ($cursos->courses as $curso) {
+            
+            $arr = [];
+            $arr['id'] = $curso->id;
+            $arr['name'] = $curso->name;
+            $arr['bg_path'] = $curso->bg_path;
+            $arr['description'] = $curso->description;
+            
+            $c[] = $arr;
+        }
+        
+        return $c;
     }
 
 }

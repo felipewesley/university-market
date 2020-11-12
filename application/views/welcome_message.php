@@ -59,12 +59,6 @@
 			</div>
 		</div>
 	</nav>
-
-	<?php
-
-	print_r($cursos);
-
-	?>
 	
 	<!-- Desktop menu model navbar -->
 	<nav id="navbar-top-desktop"></nav>
@@ -130,14 +124,14 @@
 
 								<?php $col = $index%2 ? "" : "p-3"; ?>
 
-								<div class="card card-curso <?=$col;?>" style="background: url('<?=$c->bg_path;?>');">
+								<div class="card card-curso <?=$col;?>" style="background: url('<?=$c['bg_path'];?>');">
 									<!-- <img src="..." class="card-img-top" alt="..."> -->
 									<div class="card-body">
 										<h1 class="h2 curso-name">
-											<?=$c->name;?>
+											<?=$c['name'];?>
 										</h1>
 										<p class="card-text text-left curso-description">
-											<?=$c->description;?>
+											<?=$c['description'];?>
 										</p>
 									</div>
 								</div>
@@ -163,7 +157,7 @@
 							<?php foreach ($cursos as $curso_e) : ?>
 
 								<?php $col = $index%2 ? "" : "p-3"; ?>
-								<div class="card card-curso <?=$col;?>" data-target="<?=$curso_e;?>">
+								<div class="card card-curso <?=$col;?>" data-target="<?=$curso_e['name'];?>">
 									<!-- <img src="..." class="card-img-top" alt="..."> -->
 									<div class="card-body">
 										<h1 class="h2 curso-name">

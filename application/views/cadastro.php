@@ -12,7 +12,7 @@
       <!--FORMULÁRIO DE CADASTRO-->
       <div id="login">
         <form method="post" action="/Login/save_cad"> 
-          <h1>Cadastro</h1> 
+          <h1>Cadastro</h1>
           <p> 
             <label for="nome_login">Nome</label>
             <input id="nome_login" name="nome_cad" required="required" type="text" autocomplete="off"/>
