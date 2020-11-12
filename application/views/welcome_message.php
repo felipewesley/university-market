@@ -1,7 +1,10 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 <?php
-	define("CURSOS_QUANT_MIN", 3);
-	define("CURSOS_QUANT_MAX", 10);
+	define("CURSOS_QUANT_MIN", 8);
+	define("CURSOS_QUANT_MAX", 12);
+	define("DEFAULT_COURSE_BG", "/content/images/index/cursos_background/default.jpg");
+	define("DEFAULT_COURSES_TEXT_COLOR", "#000");
+	define("DEFAULT_COURSE_DESCRIPTION", "Materiais para o curso de ");
 ?>
 <!doctype html>
 <html lang="pt-BR">
@@ -118,24 +121,24 @@
 		</div>
 		<div class="card-body">
 
-			
-
 			<div class="card-group">
 				<div class="container-fluid">
-				<div class="card-columns">
+				<div class="card-columns card-columns-lg">
 							<?php $loop = 0; ?>
 							<?php foreach ($cursos as $c) : ?>
 
-								<?php $col = $loop%2 ? "" : "p-3"; ?>
-
-								<div class="card card-curso <?=$col;?>" style="background: url('<?=$c['bg_path'];?>');">
+								<div class="card card-curso" 
+									style="
+									background:url('<?=$c['bg_path']??DEFAULT_COURSE_BG;?>');
+									color:<?=$c['title_color']??DEFAULT_COURSES_TEXT_COLOR;?>;">
 									<!-- <img src="..." class="card-img-top" alt="..."> -->
 									<div class="card-body">
 										<h1 class="h2 curso-name">
 											<?=$c['name'];?>
 										</h1>
-										<p class="card-text text-left curso-description">
-											<?=$c['description'];?>
+										<p class="card-text text-left curso-description" 
+											style="color:<?=$c['description_color']??DEFAULT_COURSES_TEXT_COLOR;?>">
+											<?=$c['description']??DEFAULT_COURSE_DESCRIPTION." {$c['name']}.";?>
 										</p>
 									</div>
 								</div>
@@ -160,16 +163,18 @@
 							<?php for($index = CURSOS_QUANT_MIN ; $index < CURSOS_QUANT_MAX ; $index++) : ?>
 
 								<?php $curso_e = $cursos[$index]; ?>
-								<?php $col = $index%2 ? "" : "p-3"; ?>
 
-								<div class="card card-curso <?=$col;?>" style="background: url('<?=$curso_e['bg_path'];?>');">
+								<div class="card card-curso" 
+								style="
+									background:url('<?=$c['bg_path']??DEFAULT_COURSE_BG;?>');
+									color:<?=$c['title_color']??DEFAULT_COURSES_TEXT_COLOR;?>;">
 									<!-- <img src="..." class="card-img-top" alt="..."> -->
 									<div class="card-body">
 										<h1 class="h2 curso-name">
 											<?=$curso_e['name'];?>
 										</h1>
-										<p class="card-text text-left curso-description">
-											<?=$curso_e['description'];?>
+										<p class="card-text text-left curso-description" style="color:<?=$c['description_color']??DEFAULT_COURSES_TEXT_COLOR;?>">
+											<?=$curso_e['description']??DEFAULT_COURSE_DESCRIPTION." {$c['name']}.";?>
 										</p>
 									</div>
 								</div>
@@ -254,7 +259,6 @@
 	<script src="./content/js/index/carousel/scripts.js"></script>
 
 	<!-- Customized JavaScript files -->
-	<!-- <script src="./content/js/index/index-script.js"></script> -->
 	<script src="./content/js/index/index-script.js"></script>
 	<!-- Cria os elementos de menus (navs) nas div's referenciadas -->
 	<script src="./content/js/index/make-menu-navbar.js"></script>

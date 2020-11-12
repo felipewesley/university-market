@@ -7,3 +7,7 @@ window.onload = function(event) {
         this.style.display = 'none'
     }
 }
+window.onresize = function() {
+    console.clear()
+    console.log(`Current width of window is ${this.innerWidth}px`)
+}
