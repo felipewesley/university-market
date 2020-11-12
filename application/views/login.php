@@ -31,6 +31,7 @@
             <input type="submit" value="Logar" /> 
           </p>
           Não tem login? <a href="/Login/fazerCad">Clique aqui</a>
+          <a href="/Login/Perfil">.</a>
         </form>
       </div>
  
