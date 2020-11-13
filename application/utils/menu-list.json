@@ -1,9 +1,9 @@
 {
-    "$menuList": [
+    "menuList": [
         {
             "title": "HOMEPAGE",
             "icon": "fa fa-home",
-            "href": "/",
+            "href": "/home",
             "help": "Go to homepage"
         }, {
             "title": "PESQUISAR",
@@ -23,7 +23,7 @@
         }, {
             "title": "PROFILE",
             "icon": "fa fa-user",
-            "href": "./Login/fazerLogin",
+            "href": "/Login/fazerLogin",
             "help": "Your profile"
         }
     ]

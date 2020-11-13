@@ -1,38 +1,4 @@
-div.welcome-div {
-    padding: 15px;
-    background: transparent;
-}
-nav#navbar-top-desktop {
-    z-index: 90;
-    display: flex;
-    border-bottom: solid 1px #ccc;
-}
-nav#navbar-bottom-mobile {
-    display: none;
-}
-a.navbarDropdownMenuLink .dropdown-menu {
-    z-index: 100;
-}
-.nav-link {
-    border-radius: 7.5px;
-    font-size: 0.75em;
-    color: #0079fa;
-    transition: ease 0.25s;
-}
-.nav-link:hover {
-    color: #2e2e2e;
-}
-i.nav-link-icon {
-    margin-right: 2.5px;
-}
-.active {
-    color: #fff;
-    background: #0079fa;
-}
-.active:hover {
-    color: #000;
-    background: #006ee4;
-}
+
 div.top-content .container-fluid div#carousel-example div[role="listbox"] div.active {
     /* border: solid 2px red; */
     color: #000;
@@ -137,13 +103,7 @@ div.container-mais-procurados {
 }
 
 .card-curso {
-    /* width: 100%; */
-    /* height: 100%; */
     background-position: center;
-    /* background: url("/content/images/index/carousel/1.jpg"); */
-    /* background: attr(data-image-src url); */
-    /* background-size: cover; */
-    /* filter: opacity(80%); */
     filter: opacity(0.75);
     background-repeat: no-repeat;
     transition: ease 0.25s;
@@ -151,11 +111,7 @@ div.container-mais-procurados {
     color: #000;
 }
 .card-curso:hover {
-    /* filter: brightness(130%); */
     filter: opacity(1);
-    /* filter: opacity(100%); */
-    /* color: #000; */
-    /* transform: scale(1.15); */
 }
 .card-curso p.curso-description {
     color: #161616;

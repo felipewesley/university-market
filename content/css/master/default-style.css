@@ -1,0 +1,63 @@
+a#logout_btn {
+    font-size: 20px;
+}
+nav#navbar-top-desktop {
+    z-index: 90;
+    display: flex;
+    border-bottom: solid 1px #ccc;
+}
+nav#navbar-bottom-mobile {
+    display: none;
+}
+.nav-link {
+    border-radius: 7.5px;
+    font-size: 0.75em;
+    color: #0079fa;
+    transition: ease 0.25s;
+}
+.nav-link:hover {
+    color: #2e2e2e;
+}
+i.nav-link-icon {
+    margin-right: 2.5px;
+}
+.active {
+    color: #fff;
+    background: #0079fa;
+}
+.active:hover {
+    color: #000;
+    background: #006ee4;
+}
+
+/* Media query para definir o tamanho da tela 
+inicial quando estiver em formato mobile */
+@media only screen and (max-width: 600px) {
+    div.welcome-div {
+        height: calc(100vh - 55px);
+    }
+    nav#navbar-top-desktop {
+        display: none;
+    }
+    nav#navbar-bottom-mobile {
+        display: inline-flex;
+        border-top: solid 1px #ccc;
+    }
+    .nav-link {
+        border-radius: 7.5px;
+        font-size: 1.5em;
+        color: #0079fa;
+        transition: ease 0.25s;
+    }
+    .nav-link:hover {
+        color: #000;
+    }
+    .active {
+        color: #fff;
+        background: #0079fa;
+    }
+    .active:hover {
+        color: #000;
+        background: #006ee4;
+    }
+}
