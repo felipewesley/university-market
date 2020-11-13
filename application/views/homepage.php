@@ -1,7 +1,7 @@
 <?php
 	define("CURSOS_QUANT_MIN", 8);
 	define("CURSOS_QUANT_MAX", 12);
-	define("DEFAULT_COURSE_BG", "/content/images/index/cursos_background/default.jpg");
+	define("DEFAULT_COURSE_BG", "/content/images/layout/cursos_background/default.jpg");
 	define("DEFAULT_COURSES_TEXT_COLOR", "#000");
 	define("DEFAULT_COURSE_DESCRIPTION", "Materiais para o curso de ");
 ?>
