@@ -13,9 +13,9 @@ class Login extends CI_Controller{
 
 		$this->load->view('cadastro');
 	}
-	public function Perfil() {
+	public function Perfil($username) {
 
-		$this->show_p();
+		$this->show_p($username);
 	}
 
 	public function conf_login() {
@@ -27,8 +27,8 @@ class Login extends CI_Controller{
 
 
 		//var_dump($user);
-		if ($user == TRUE) {
-			$this->Perfil();
+		if ($user == TRUE && $this->usuario_model->setlogado($username)){
+			$this->Perfil($username);
 		}else{
 			//$this->session->set_flashdata('danger', 'Senha invalida!');
 			$this->load->view('login');		
@@ -51,16 +51,17 @@ class Login extends CI_Controller{
 		$this->load->view('login');	
 	}
 
-	public function show_p()
+	public function show_p($nome)
 	{
 		$this->load->model('Usuario_model');
-        $usuarios = $this->Usuario_model->listaUsuarios();
+		$id = $this->Usuario_model->pegarlogado($nome);
+        //$usuarios = $this->Usuario_model->listaUsuarios($id);
           //echo '<pre>';     
           // print_r($usuarios);
           // echo '</pre>';     
        
-        $data['usuario'] =  $usuarios;
-        $this->load->view('perfil', $data);
+        //$data['usuario'] =  $usuarios;
+        //$this->load->view('perfil', $data);
 	}
 
 

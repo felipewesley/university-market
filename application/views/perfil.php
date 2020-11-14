@@ -75,24 +75,7 @@ a{
 <body>
 <center>
     <h1>Seus Dados Cadastrais</h1>
-    <table class="tg">
-        <thead>
-            <th class="tg-0lax">username</th>
-            <th class="tg-0lax">senha</th>
-            <th class="tg-0lax">email</th>
-        </thead>
-        <tbody>
-            <?php foreach($usuario as $usuario): ?>
-                <tr>
-                   
-                    <td class="tg-0lax"><?= $usuario->nome ?></td>
-                    <td class="tg-0lax"><?= $usuario->senha ?></td>
-                    <td class="tg-0lax"><?= $usuario->email ?></td>
-                    
-                </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
+        <?php foreach($usuario as $usuario): ?>
     <div id="login">
         <form method="post" action="/Login/conf_login">  
           <p> 
@@ -105,6 +88,7 @@ a{
             <input id="senha_login" name="senha_login" required="required" type="password" autocomplete="off" placeholder="<?= $usuario->senha ?>" /> 
           </p> 
         </form>
+         <?php endforeach; ?>
       </div>
     </center>
 </body>
