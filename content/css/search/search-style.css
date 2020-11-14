@@ -16,3 +16,8 @@ button#btn-search-sm {
 div.div-filters {
     margin-bottom: 15px;
 }
+span#filter-valor-qualquer-valor:hover {
+    filter: brightness(110%);
+    transition: ease 0.25s;
+    cursor: pointer;
+}

@@ -2,7 +2,7 @@
 
 class SearchModel extends CI_Model {
 
-    public function filter() {
+    public function filter($filter_by, $content) {
         
         return true;
     }
