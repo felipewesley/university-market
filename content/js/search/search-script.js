@@ -20,6 +20,8 @@ filter_valor.oninput = async function() {
 
     if (this.value == 0) {
         target.className = "badge badge-danger"
+    } else if (this.value == 100) {
+        target.className = "badge badge-success"
     } else {
         target.className = "badge badge-primary"
     }
@@ -30,7 +32,28 @@ for (let index in input_search) {
     
     const filtro = input_search[index]
     filtro.onfocus = function() {
+        window.scrollTo(0, function(e) {
+            e.preventDefault();
+            var id = $(this).attr('href'),
+                    targetOffset = $(id).offset().top;
+                    
+            $('html, body').animate({ 
+                scrollTop: targetOffset - 100
+            }, 500);
+        })
         $("#collapse-filters-search").collapse("hide")
+        this.focus()
+    }
+    filtro.onkeypress = function() {
+        window.scrollTo(0, function(e) {
+            e.preventDefault();
+            var id = $(this).attr('href'),
+                    targetOffset = $(id).offset().top;
+                    
+            $('html, body').animate({ 
+                scrollTop: targetOffset - 100
+            }, 500);
+        })
     }
 }
 

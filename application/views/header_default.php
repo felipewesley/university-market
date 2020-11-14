@@ -24,7 +24,7 @@
 <body class="bg-light">
 
 	<!-- Image and text -->
-	<nav class="navbar navbar-dark bg-primary">
+	<nav class="navbar navbar-dark bg-primary" id="nav-university-market">
 		<a class="navbar-brand" href="#">
 			<!-- <img src="/content/images/logo-project.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy"> -->
 			<img src="/content/images/logo-project.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">

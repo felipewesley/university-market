@@ -2,3 +2,15 @@
 const PROJECT_NAME = "University Market";
 
 console.log(`Welcome to ${PROJECT_NAME}`)
+
+$('a[href^="#"]').on('click', function(e) {
+    e.preventDefault();
+    if (this.getAttribute("data-toggle") != "collapse") {
+        var id = $(this).attr('href'),
+			targetOffset = $(id).offset().top;
+			
+        $('html, body').animate({ 
+            scrollTop: targetOffset - 100
+        }, 500);
+    }
+});

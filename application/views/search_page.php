@@ -13,8 +13,7 @@
             <i class="fa fa-plus-circle"></i> E muitos outros...<br>
         </p>
     </p>
-    <hr class="my-4">
-    <!-- <p>It uses utility classes for typography.</p> -->
+    <hr class="my-4" id="search-divisor">
     <div class="input-group-search">
         <div class="div-filters">
             <a class="filters-btn" data-toggle="collapse" href="#collapse-filters-search" role="button" aria-expanded="false" aria-controls="collapse-filters-search">
@@ -97,6 +96,8 @@
 
 </div>
 <hr class="my-4">
+
+
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

@@ -7,6 +7,8 @@ class Search extends CI_Controller {
         $view_name = "search_page";
         $data = [];
 
+        $this->load->model('SearchModel', 'pesquisa');
+
         $data['filter_by'] = $filter_by;
         $data['content'] = $content;
         
