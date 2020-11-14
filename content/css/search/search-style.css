@@ -1,0 +1,18 @@
+div#input-group-search-sm {
+    display: none;
+}
+button#btn-search-sm {
+    margin-top: 15px;
+}
+@media only screen and (max-width: 600px) {
+    div#input-group-search-lg {
+        display: none;
+    }
+    div#input-group-search-sm {
+        display: block;
+    }
+}
+
+div.div-filters {
+    margin-bottom: 15px;
+}

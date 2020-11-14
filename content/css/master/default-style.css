@@ -1,6 +1,10 @@
 a#logout_btn {
     font-size: 20px;
 }
+div.divisor {
+    display: block;
+    margin-bottom: 350px;
+}
 nav#navbar-top-desktop {
     z-index: 90;
     display: flex;

@@ -1,0 +1,68 @@
+.content {
+    display: inline;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+    line-height: 40px;
+    font-family: 'Muli';
+    color: #000;
+    height: 160px;
+    overflow: hidden;
+  }
+  
+  .visible {
+    font-weight: 600;
+    overflow: hidden;
+    width: 500px;
+    height: 40px;
+    padding: 0 40px;
+  }  
+  
+  p {
+    display: inline;
+    float: left;
+    margin: 0;
+  }
+  
+  ul {
+    margin-top: 0;
+    padding-left: 110px;
+    text-align: left;
+    list-style: none;
+    animation: 7s linear 0s normal none infinite change;
+  }
+  
+  ul li {
+    line-height: 40px;
+    margin: 0;
+  }
+  
+  @keyframes opacity {
+    0%, 100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  @keyframes change {
+    0%, 12%, 100% {
+      transform: translateY(0);
+    }
+    17%,29% {
+      transform: translateY(-25%);
+    }
+    34%,46% {
+      transform: translateY(-50%);
+    }
+    51%,63% {
+      transform: translateY(-75%);
+    }
+    68%,80% {
+      transform: translateY(-50%);
+    }
+    85%,97% {
+      transform: translateY(-25%);
+    }
+  }

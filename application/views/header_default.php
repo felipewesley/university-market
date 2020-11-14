@@ -52,3 +52,6 @@
 		<?php endforeach; ?>
 
 	</nav>
+
+	<br>
+	<!-- <div class="divisor"></div> -->

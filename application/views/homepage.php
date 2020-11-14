@@ -35,7 +35,7 @@
 					<?php $active = ($index === 1) ? "active" : ""; ?>
 
 					<div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 <?=$active;?>">
-						<a href="#" target="_self">
+						<a href="/home/cursos/<?=$index;?>" target="_self">
 							<img src="./content/images/index/carousel/<?=$index;?>.jpg" class="img-fluid mx-auto d-block" alt="img<?=$index;?>">
 						</a>
 						<p class="h5 carousel-item-title">Título do elemento <?=$index;?></p>
@@ -45,7 +45,7 @@
 						<div class="alert alert-success text-center">
 							<strong class="h3"> $<?=rand(10,100);?>.<?=rand(0,9);?>0 </strong>
 						</div>
-						<button type="button" class="btn btn-primary btn-block">Ver produto</button>
+						<button type="button" class="btn btn-primary btn-block btn-ver-produto">Ver produto</button>
 					</div>
 
 				<?php endfor; ?>

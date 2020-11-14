@@ -51,6 +51,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class CI_Controller {
 
+	protected function create_university_market_page($views_name = []) {
+		// Carrega a biblioteca de controle padrão UniversityMarket com algumas funções
+		$this->load->library('UniversityMarket', null, "control");
+
+		// Dados do arquivo JSON contendo os menus da página
+		// Deve ser passado sempre para o header e para o footer da página
+		$menu['menu_data'] = $this->control::get_menu_config();
+
+		// Cabeçalho padrão
+		$this->load->view('header_default', $menu);
+		// Corpo da página
+		foreach ($views_name as $view) {
+			foreach ($view as $view_name => $data) {
+				$this->load->view($view_name, $data);
+			}
+		}
+		// Rodapé padrão
+		$this->load->view('footer_default', $menu);
+	}
+
 	/**
 	 * Reference to the CI singleton
 	 *

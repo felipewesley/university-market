@@ -8,7 +8,7 @@
         }, {
             "title": "PESQUISAR",
             "icon": "fa fa-search",
-            "href": "/",
+            "href": "/search/results",
             "help": "Search anything..."
         }, {
             "title": "NOVO",
