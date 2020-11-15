@@ -63,13 +63,16 @@ window.onload = function() {
         document.getElementById("filter-input-filter-valor").innerText = "Todos os valores"
     }
 
-    if (window.innerWidth > 600) {
+    // Focus no input de pesquisa visivel de acordo com a largura da pagina
+    if (window.location.href.indexOf("?") == -1) {
+        if (window.innerWidth > 600) {
 
-        return document.getElementById("input-search-lg").focus()
+            return document.getElementById("input-search-lg").focus()
+        }
+    
+        document.getElementById("faca-sua-pesquisa").className += "h4"
+        return document.getElementById("input-search-sm").focus()
     }
-
-    document.getElementById("faca-sua-pesquisa").className += "h4"
-    return document.getElementById("input-search-sm").focus()
 }
 
 let filter_valor = document.getElementById("input-filter-valor")
@@ -139,17 +142,60 @@ for (let index in filters) {
     }
 }
 
-function getSelectedFilter() {
+function getSelectedFilters() {
     
-    let div_selected_filter = document.getElementById("selected-filter");
+    let selected_filters = document.getElementById("selected-filter").childNodes;
+    let arr = []
 
+    for (let element of selected_filters) {
+
+        if (element.id != "") {
+        
+            if (document.getElementById(element.id) !== null) {
+                
+                const e = document.getElementById(element.id)
+
+                if (e.tagName.toUpperCase() == "SPAN") {
+                    let data = []
+                    data['id'] = e.id
+                    data['type'] = e.id.slice(String("filter-input-filter-").length, this.lenght)
+                    data['text'] = e.innerText
+                    data['value'] = e.getAttribute("aria-value")
+                    arr.push(data)
+                }
+            }
+        }
+    }
+    return arr
+}
+
+function make_string_with_filters(filters = []) {
+    
+    let str = "";
+
+    for (let index in filters) {
+        
+        const element = filters[index]
+
+        str+= `${element.type}:${element.value}`
+
+        if (index < filters.length-1) {
+            str+= ";"
+        }
+    }
+    return str;
 }
 
 /* Função de pesquisa */
 let btn_search = document.querySelectorAll("#btn-search-sm, #btn-search-lg")
 for (let btn of btn_search) {
     
-    btn.onclick = function() {
-        console.log("PESQUISAR")
-    }
+    continue;
+    // btn.onclick = function() {
+
+    //     let filters = getSelectedFilters()
+    //     let parms = make_string_with_filters(filters)
+        
+    //     return window.location.href = "/search/results/" + parms
+    // }
 }

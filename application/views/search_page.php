@@ -77,21 +77,29 @@
                 </div>
             </div>
         </div>
-        <div class="input-group input-group-lg mb-3 input-txt-search" id="input-group-search-lg">
-            <input type="text" class="form-control" placeholder="Pesquise aqui" aria-describedby="btn-search-lg" id="input-search-lg">
-            <div class="input-group-append">
-                <button class="btn btn-primary" type="button" id="btn-search-lg">
+        <form action="/search/results#search-divisor" id="form-search" method="get">
+            <div class="input-group input-group-lg mb-3 input-txt-search" id="input-group-search-lg">
+                <input type="text" class="form-control" name="search_content" placeholder="Pesquise aqui" aria-describedby="btn-search-lg" id="input-search-lg">
+                <div class="input-group-append">
+                    <button class="btn btn-primary" name="search" value="true" type="submit" id="btn-search-lg">
+                        <i class="fa fa-search"></i> Buscar
+                    </button>
+                </div>
+            </div>
+            <div class="form-group mb-3" id="input-group-search-sm">
+                <input class="form-control form-control-lg input-txt-search" name="search_content" type="text" placeholder="Pesquise aqui" id="input-search-sm">
+                <button type="submit" name="search" value="true" class="btn btn-primary btn-lg btn-block" id="btn-search-sm">
                     <i class="fa fa-search"></i> Buscar
                 </button>
             </div>
-        </div>
-        <div class="form-group mb-3" id="input-group-search-sm">
-            <input class="form-control form-control-lg input-txt-search" name="content" type="text" placeholder="Pesquise aqui" id="input-search-sm">
-            <button type="button" class="btn btn-primary btn-lg btn-block" id="btn-search-sm">
-                <i class="fa fa-search"></i> Buscar
-            </button>
-        </div>
+        </form>
     </div>
+
+    <?php if (isset($_GET['search'])) : ?>
+        <pre>
+            <?php print_r($_GET); ?>
+        </pre>
+    <?php endif; ?>
 
 </div>
 <hr class="my-4">

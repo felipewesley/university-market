@@ -9,38 +9,46 @@
         }, {
             "id": 2,
             "name": "Análise e desenvolvimento de sistemas",
-            "bg_path": "ads.png",
+            "bg_path": "ads_2.jpg",
             "title_color": "#fff",
             "description_color": "#fff",
             "description": "Computadores, livros de programação orientada à objetos, livro de MVC e MVVM, etc."
         }, {
             "id": 3,
             "name": "Arquitetura e urbanismo",
+            "bg_path": "arquitetura_2.jpg",
             "title_color": "#000",
             "description": "Materiais para o curso de arquitetura e urbanismo."
         }, {
             "id": 4,
             "name": "Biologia",
-            "title_color": "#000",
+            "bg_path": "biologia.jpg",
+            "title_color": "#fff",
+            "description_color": "#fff",
             "description": "Materiais para o curso de biologia, etc."
         }, {
             "id": 5,
             "name": "Ciência da computação",
+            "bg_path": "ciencia_computacao.jpg",
             "title_color": "#000",
+            "description_color": "#fff",
             "description": "Materiais para ciência da computação, livro de sistemas operacionais, compiladores, etc."
         }, {
             "id": 6,
             "name": "Contabilidade",
+            "bg_path": "contabilidade.jpg",
             "title_color": "#000",
             "description": "Materiais para o curso de contabilidade, calculadora matemática, etc."
         }, {
             "id": 7,
             "name": "Direito",
+            "bg_path": "direito.jpg",
             "title_color": "#000",
             "description": "Vade Mecum, Constituição brasileira, códigos penais, civis, etc."
         }, {
             "id": 8,
             "name": "Economia",
+            "bg_path": "economia.jpg",
             "title_color": "#000",
             "description": "Materiais para o curso de economia, apostila de aplicação de impostos 2019, etc."
         }, {
