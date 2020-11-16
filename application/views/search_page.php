@@ -114,7 +114,12 @@
 
     <?php elseif ($search) : ?>
 
-        Sua pesquisa por "<strong><?=$content;?></strong>" retornou aproximadamente <?=rand(10,1500);?> resultados.
+        <div class="alert alert-success">
+            Exibindo resultados para "<strong><?=$content;?></strong>".
+            <small class="form-text text-muted">
+                Aproximadamente <?=rand(10,1500);?> resultados.
+            </small>
+        </div>
 
         <p>
             Filtros aplicados:

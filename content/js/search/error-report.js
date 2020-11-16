@@ -1,13 +1,16 @@
-const USER = "#your_username"
-let error_type = "";
-
-let filter_reporter = document.getElementById("filter-problem-report")
-error_type = "search"
-filter_reporter.onclick = function() {
+if (document.getElementById("filter-problem-report") !== null) {
     
-    filter_report_error(USER, error_type)
-    this.style.display = "none"
-    return true
+    const USER = "#your_username"
+    let error_type = "";
+
+    let filter_reporter = document.getElementById("filter-problem-report")
+    error_type = "search"
+    filter_reporter.onclick = function() {
+        
+        filter_report_error(USER, error_type)
+        this.style.display = "none"
+        return true
+    }
 }
 
 function show_modal_response(user, errorName, content, status) {

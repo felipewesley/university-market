@@ -13,17 +13,22 @@ class SearchModel extends CI_Model {
 
         $flag = $filters['flag'] ?? null;
         $content = $filters['q'] ?? null;
-        $filter = $filters['f'] ?? null;
-        
+        $filter = $filters['f'] ?? false;
         $data['search'] = $filter;
 
-        if (is_null($flag) || is_null($content) || is_null($filter)) {
+        if (is_null($flag) || $flag === false || $flag === "false") {
             
-            $data['search'] = null;
+            $data['search'] = false;
             return $data;
         }
 
-        $data['content'] = empty($filter)||is_null($filter) ? "todos os registros" : $filters['search_content'];
+        $data['content'] = empty($content)||is_null($content) ? "todos os registros" : $content;
+
+        if (empty($filter)||is_null($filter)) {
+
+            $data['filters'][] = array("label" => "Todos os registros", "value" => "%");
+            return $data;
+        }
         
         $filters_decrypted = base64_decode($filter);
         $arr_filters = explode("&", $filters_decrypted);
@@ -33,6 +38,10 @@ class SearchModel extends CI_Model {
             foreach ($arr_filters as $filter) {
                 
                 $v = explode("=", $filter);
+
+                if ($v === false || count($v) <= 1) {
+                    throw new Exception("Parâmetros inválidos..", 1);
+                }
                 $label = "";
 
                 $value = $v[1];
@@ -72,6 +81,10 @@ class SearchModel extends CI_Model {
 
         } catch (Exception $e) {
             
+            if ($e->getCode() === 1) {
+                
+                return array('search' => null);
+            }
             return array('search' => false);
         }
     }
