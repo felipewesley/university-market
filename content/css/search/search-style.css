@@ -11,6 +11,9 @@ button#btn-search-sm {
     div#input-group-search-sm {
         display: block;
     }
+    #faca-sua-pesquisa {
+        font-size: 20px;
+    }
 }
 
 div.div-filters {
