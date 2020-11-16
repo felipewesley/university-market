@@ -11,6 +11,7 @@ class Product extends CI_Controller {
         if ($id) {
             
             $data['product_id'] = $id;
+            $data['product_img_path'] = "/content/images/index/carousel/$id.jpg";
             $this->load->university_market_page('product_details', $data);
             return true;
         }
