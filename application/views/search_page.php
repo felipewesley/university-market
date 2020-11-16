@@ -1,7 +1,7 @@
 <!-- Link to CSS of search page -->
 <link rel="stylesheet" href="/content/css/search/search-style.css">
 
-<div class="jumbotron">
+<div class="jumbotron bg-transparent">
     <h1 class="display-4" id="faca-sua-pesquisa">Faça sua pesquisa</h1> <hr>
     <p class="lead">
         Busque por diversos materiais disponíveis nesta plataforma, entre eles: <br>

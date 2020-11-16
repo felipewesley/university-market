@@ -198,6 +198,7 @@ class CI_Loader {
 		// Dados do arquivo JSON contendo os menus da página
 		// Deve ser passado sempre para o header e para o footer da página
 		$menu['menu_data'] = UniversityMarket::get_menu_config();
+		$menu['background_color'] = "background-default";
 
 		// Cabeçalho padrão
 		$this->view('header_default', $menu);

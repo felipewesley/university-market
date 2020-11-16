@@ -21,7 +21,7 @@
 
 	<title>:: University Market</title>
 </head>
-<body class="bg-light">
+<body class="<?=$background_color;?>">
 
 	<!-- Image and text -->
 	<nav class="navbar navbar-dark bg-primary" id="nav-university-market">

@@ -69,7 +69,7 @@
 	<div class="card-header">
 		<h2>Busca por curso</h2>
 	</div>
-	<div class="card-body">
+	<div class="card-body bg-transparent">
 
 		<div class="card-group">
 			<div class="container-fluid">
