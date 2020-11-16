@@ -13,7 +13,7 @@
         }, {
             "title": "NOVO",
             "icon": "fa fa-plus-square",
-            "href": "/",
+            "href": "/user/newPost",
             "help": "Create a new post"
         }, {
             "title": "NOTIFICAÇÕES",
