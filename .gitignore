@@ -10,9 +10,11 @@
 !content/*
 # Remove the skecth/* folder of the ignored files/folders
 !skecth/*
+# Remove the system/* folder of the ignored files/folders
+# for the university_market_page() global method implements in CI_Loader
+!system/*
 
 # Ignored files and folders
-system/*
 user_guide/*
 index.php
 license.txt
