@@ -14,3 +14,9 @@ $('a[href^="#"]').on('click', function(e) {
         }, 500);
     }
 });
+
+let btn_back = document.getElementById("control-back")
+btn_back.onclick = function() {
+    
+    return window.history.back()
+}

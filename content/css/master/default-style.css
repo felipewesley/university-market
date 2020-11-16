@@ -37,6 +37,32 @@ i.nav-link-icon {
     background: #006ee4;
 }
 
+a.default-link {
+    transition: ease 0.25s;
+    text-decoration: none;
+}
+a.default-link:hover {
+    cursor: pointer;
+}
+
+div#navbar-controls {
+    background: #e9e9e9;
+    padding: 5px 15px;
+}
+a.default-link-control {
+    padding: 5px 10px;
+    color: #3e3e3e;
+}
+a.default-link-control:hover {
+    border-radius: 5px;
+    background: #3e3e3e;
+    color: #fff;
+}
+a#control-back {
+    font-weight: lighter;
+    font-size: 16px;
+}
+
 /* Media query para definir o tamanho da tela 
 inicial quando estiver em formato mobile */
 @media only screen and (max-width: 600px) {

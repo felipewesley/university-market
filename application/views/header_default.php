@@ -53,5 +53,10 @@
 
 	</nav>
 
-	<br>
+	<div class="container-fluid" id="navbar-controls">
+		<a class="default-link default-link-control" id="control-back">
+			<i class="fas fa-arrow-left"></i> VOLTAR
+		</a>
+	</div>
+	<!-- <br> -->
 	<!-- <div class="divisor"></div> -->
