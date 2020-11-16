@@ -79,32 +79,62 @@
         </div>
         <form action="/search/results#search-divisor" id="form-search" method="get">
             <div class="input-group input-group-lg mb-3 input-txt-search" id="input-group-search-lg">
-                <input type="text" class="form-control" name="search_content" placeholder="Pesquise aqui" aria-describedby="btn-search-lg" id="input-search-lg">
+                <input type="text" class="form-control" name="q" placeholder="Pesquise aqui" aria-describedby="btn-search-lg" id="input-search-lg">
                 <div class="input-group-append">
-                    <button class="btn btn-primary" name="search" value="true" type="submit" id="btn-search-lg">
+                    <button class="btn btn-primary" name="flag" value="true" type="submit" id="btn-search-lg">
                         <i class="fa fa-search"></i> Buscar
                     </button>
                 </div>
             </div>
             <div class="form-group mb-3" id="input-group-search-sm">
-                <input class="form-control form-control-lg input-txt-search" name="search_content" type="text" placeholder="Pesquise aqui" id="input-search-sm">
-                <button type="submit" name="search" value="true" class="btn btn-primary btn-lg btn-block" id="btn-search-sm">
+                <input class="form-control form-control-lg input-txt-search" name="q" type="text" placeholder="Pesquise aqui" id="input-search-sm">
+                <button type="submit" name="flag" value="true" class="btn btn-primary btn-lg btn-block" id="btn-search-sm">
                     <i class="fa fa-search"></i> Buscar
                 </button>
             </div>
         </form>
     </div>
 
-    <?php if (isset($_GET['search'])) : ?>
-        <pre>
-            <?php print_r($_GET); ?>
-        </pre>
+    
+    <?php if (is_null($search)) : ?>
+    
+        <div class="alert alert-warning">
+            <strong>Ops!</strong> Tivemos um problema com a sua pesquisa. 
+            <strong>Mas você pode tentar novamente :)</strong>
+            <a id="filter-problem-report">
+                <span class="badge badge-primary">Reportar este problema</span>
+            </a>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+    <?php elseif ($search) : ?>
+
+        Sua pesquisa por "<strong><?=$content;?></strong>" retornou aproximadamente <?=rand(10,1500);?> resultados.
+
+        <p>
+            Filtros aplicados:
+            <?php foreach ($filters as $key => $value) : ?>
+                <span class="badge badge-primary" aria-value="<?=$value['value'];?>">
+                    <?=$value['label'];?>
+                </span>
+            <?php endforeach; ?>
+        </p>
+
+    <?php else : ?>
+
+        <div class="alert alert-success">
+            Exibindo os resultados mais relevantes pra você.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
     <?php endif; ?>
 
 </div>
 <hr class="my-4">
-
-
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -112,3 +142,4 @@
 
 <!-- JavaScript to search page -->
 <script src="/content/js/search/search-script.js"></script>
+<script src="/content/js/search/error-report.js"></script>

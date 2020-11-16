@@ -177,10 +177,10 @@ function make_string_with_filters(filters = []) {
         
         const element = filters[index]
 
-        str+= `${element.type}:${element.value}`
+        str+= `${element.type}=${element.value}`
 
         if (index < filters.length-1) {
-            str+= ";"
+            str+= "&"
         }
     }
     return str;
@@ -189,13 +189,34 @@ function make_string_with_filters(filters = []) {
 /* Função de pesquisa */
 let btn_search = document.querySelectorAll("#btn-search-sm, #btn-search-lg")
 for (let btn of btn_search) {
-    
     continue;
-    // btn.onclick = function() {
+}
 
-    //     let filters = getSelectedFilters()
-    //     let parms = make_string_with_filters(filters)
-        
-    //     return window.location.href = "/search/results/" + parms
-    // }
+/* Evento submit do formulário de pesquisa */
+let form = document.getElementById("form-search")
+form.onsubmit = function(event) {
+    
+    // event.preventDefault()
+
+    // Removendo input nao visivel para nao enviar por get
+    if (window.innerWidth < 600) {
+        let ref = document.getElementById("input-group-search-lg")
+        this.removeChild(ref)
+    } else {
+        let ref = document.getElementById("input-group-search-sm")
+        this.removeChild(ref)
+    }
+
+    let e = document.createElement("input")
+    e.type = "hidden"
+    e.name = "f"
+    
+    let selected_filters = getSelectedFilters()
+    let str_filters = make_string_with_filters(selected_filters)
+    e.value = btoa(str_filters)
+
+    this.appendChild(e)
+
+    // return this.submit()
+    return true
 }

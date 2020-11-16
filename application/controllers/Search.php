@@ -5,13 +5,10 @@ class Search extends CI_Controller {
     public function results($filter_by = false) {
         
         $view_name = "search_page";
-        // $data = [];
-
-        $data = $_GET;
 
         $this->load->model('SearchModel', 'pesquisa');
 
-        $data['filter_by'] = $filter_by;
+        $data = $this->pesquisa->make_array_filters($_GET);
         
         $view = [];
         $view[] = [$view_name => $data];
