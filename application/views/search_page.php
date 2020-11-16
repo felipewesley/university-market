@@ -100,13 +100,16 @@
     
         <div class="alert alert-warning">
             <strong>Ops!</strong> Tivemos um problema com a sua pesquisa. 
-            <strong>Mas você pode tentar novamente :)</strong>
+            <strong>Mas você pode tentar novamente em instantes :)</strong>
             <a id="filter-problem-report">
                 <span class="badge badge-primary">Reportar este problema</span>
             </a>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
+        </div>
+        <div class="alert alert-success">
+            Exibindo resultados relevantes para você.
         </div>
 
     <?php elseif ($search) : ?>

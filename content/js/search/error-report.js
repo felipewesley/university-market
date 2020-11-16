@@ -1,17 +1,13 @@
-window.onload = function() {
+const USER = "#your_username"
+let error_type = "";
 
-    const USER = "felipewesley"
-    let error_type = "";
-
-    let filter_reporter = document.getElementById("filter-problem-report")
-    error_type = "search"
-    filter_reporter.onclick = function() {
-        
-        filter_report_error(USER, error_type)
-        this.style.display = "none"
-        return true
-    }
-
+let filter_reporter = document.getElementById("filter-problem-report")
+error_type = "search"
+filter_reporter.onclick = function() {
+    
+    filter_report_error(USER, error_type)
+    this.style.display = "none"
+    return true
 }
 
 function show_modal_response(user, errorName, content, status) {
@@ -97,21 +93,31 @@ function filter_report_error(user, error) {
         .concat(`user=${user}`)
         .concat(`&error=${error}`)
 
-    http.open('GET', target, true);
+    http.open('POST', target, true);
     http.onreadystatechange = async function () {
 
         if (this.readyState == XMLHttpRequest.DONE) {
 
             if (this.status === 200) {
+
+                const response = JSON.parse(http.responseText)
+
+                if (response.error_code) {
+                    
+                    show_modal_response(user, error, response.error_msg, true)
+                    
+                    return true
+                }
                 
-                show_modal_response(user, error, http.responseText, true)
-                // alert(http.responseText)
+                show_modal_response(user, error, response.error_msg, false)
+                
+                return true
                 
             } else {
                 
                 let error_msg = "Não foi possivel reportar o seu erro no momento :(";
+
                 show_modal_response(user, error, error_msg, false)
-                // alert("nao deu boa" + http.responseText)
             }
         }
     }
