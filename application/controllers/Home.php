@@ -25,34 +25,19 @@ class Home extends CI_Controller {
 		
 		$data['cursos'] = $this->homepage->getCursos();
 
-		$view = [];
-		$view[] = ['homepage' => $data];
-
 		// Função que cria a página default da aplicação com cabeçalho e rodapé, 
-		// preenchendo o conteúdo com $view no padrão: 
-		// array(['view_1' => '$dados1'],['view_2' => $dados2])
-		$this->create_university_market_page($view);
+		// preenchendo o conteúdo com $view, contendo $data
+		$this->load->university_market_page('homepage', $data);
 		
 		// JavaScript adicional para o carousel inicial
+		// Incluido depois porque depende do carregamento da lib jQuery (bootstrap)
 		$this->load->view('include_js_carousel');
 	}
 
 	public function cursos($curso = false) {
 
-		// Carrega a biblioteca de controle padrão UniversityMarket com algumas funções
-		$this->load->library('UniversityMarket', null, "control");
-
-		// Dados do arquivo JSON contendo os menus da página
-		// Deve ser passado sempre para o header e para o footer da página
-		$menu['menu_data'] = $this->control::get_menu_config();
-
 		$data['curso_especifico'] = $curso;
-
-		// Cabeçalho padrão
-		$this->load->view('header_default', $menu);
-		// Corpo da página
-		$this->load->view('courses_list', $data);
-		// Rodapé padrão
-		$this->load->view('footer_default', $menu);
+		
+		$this->load->university_market_page('courses_list', $data);
 	}
 }

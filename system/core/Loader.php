@@ -177,6 +177,53 @@ class CI_Loader {
 	// --------------------------------------------------------------------
 
 	/**
+	 * University Market Page Loader
+	 * 
+	 * Método personalizado para carregar conteúdo na view padrão do projeto
+	 * 
+	 * @author Felipe Wesley Basso
+	 * @link github.com/felipewesley
+	 * @method university_market_page() Carrega a visualização padrão (cabeçalho+rodapé) com o corpo definido em parâmetro
+	 * @param string|array $view_body Nome da(s) view(s) que contém o conteúdo da página. 
+	 * * Obs.: Se `$view_body` for um array de views, o mesmo deve estar no seguinte formato: 
+	 * *`array([view_a => dados_a], [view_b => null], [view_c => dados_c])`
+	 * @param array $data Dados que serão utilizados na view
+	 * @return object
+	 *  */
+	public function university_market_page($view_body, $data = NULL) {
+
+		// Carrega a biblioteca de controle padrão UniversityMarket com algumas funções
+		require_once "application/libraries/UniversityMarket.php";
+
+		// Dados do arquivo JSON contendo os menus da página
+		// Deve ser passado sempre para o header e para o footer da página
+		$menu['menu_data'] = UniversityMarket::get_menu_config();
+
+		// Cabeçalho padrão
+		$this->view('header_default', $menu);
+
+		// Corpo da página
+		if (is_string($view_body)) {
+
+			$this->view($view_body, $data);
+
+		} else {
+
+			foreach ($view_body as $view) {
+
+				foreach ($view as $view_name => $value) {
+					$this->view($view_name, $value);
+				}
+			}
+		}
+
+		// Rodapé padrão
+		$this->view('footer_default', $menu);
+
+		return $this;
+	}
+
+	/**
 	 * Library Loader
 	 *
 	 * Loads and instantiates libraries.
