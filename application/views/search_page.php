@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="/content/css/search/search-style.css">
 
 <div class="jumbotron">
-    <h1 class="display-4" id="faca-sua-pesquisa">Faça sua pesquisa</h1>
+    <h1 class="display-4" id="faca-sua-pesquisa">Faça sua pesquisa</h1> <hr>
     <p class="lead">
         Busque por diversos materiais disponíveis nesta plataforma, entre eles: <br>
 
