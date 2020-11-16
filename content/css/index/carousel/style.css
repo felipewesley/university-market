@@ -65,7 +65,17 @@ img { max-width: 100%; }
 
 .top-content { width: 100%; padding-top: 100px; }
 
-.carousel-control-next, .carousel-control-prev { border: 0; }
+/* a.carousel-control-ico {  } */
+html body.background-default 
+div.top-content div.container-fluid 
+div#carousel-example.carousel.slide 
+a.carousel-control-next.carousel-control-ico 
+span.carousel-control-next-icon {
+	color: #3e3e3e;
+}
+.carousel-control-next, .carousel-control-prev {
+	border: 0;
+}
 
 
 /***** Section 1 *****/

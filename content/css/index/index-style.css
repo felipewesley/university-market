@@ -1,4 +1,6 @@
-
+.carousel-control-ico {
+    color: #3e3e3e;
+}
 div.top-content .container-fluid div#carousel-example div[role="listbox"] div.active {
     /* border: solid 2px red; */
     color: #000;
