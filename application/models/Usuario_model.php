@@ -18,30 +18,16 @@ class Usuario_model extends CI_Model{
         return $this->db->insert('usuario', $data);
     }
 
-   /* public function setlogado($nome)
-    {
-        $this->db->where('nome', $nome);
-        $this->db->set('logado',1);
-        $this->db->update('usuario');
-        if($this->db->trans_status() === true){
-            return true;
-        }else{
-            return false;
-        }
-   
-    }*/
-    /* public function pegarlogado($nome)
-    {
-        $this->db->select('id_usuario');
-        $this->db->where('logado',1); 
+    public function pegarlogado($nome){
+        $this->db->select('*'); 
         $this->db->where('nome',$nome);
-        if($query = $this->db->get('usuario')){   
-            //return $data;
+        if($query = $this->db->get('usuario')){
+            $data['usuario'] = $query->result(); 
+            return $data;
         }else{
-            return false;
+            return false;   
         }
-
-    }*/
+    }
 
     public function deleta($id){
         return $this->db->delete('usuario', ['id_usuario' => $id]);
