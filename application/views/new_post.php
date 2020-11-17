@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="/content/css/new_post/new-post-style.css">
 
+
 <section id="section-new-post-form">
 <h1 class="h3">
     Nova postagem
@@ -17,13 +18,13 @@
             <div class="form-group">
                 <label for="input-product-name">Nome do produto</label>
                 <span class="text-danger">*</span>
-                <input type="text" class="form-control" id="input-product-name" placeholder="Nome do seu produto">
+                <input type="text" class="form-control " id="input-product-name" placeholder="Nome do seu produto" > 
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="input-product-type">Tipo do produto</label>
                     <span class="text-danger">*</span>
-                    <select id="input-product-type" class="form-control">
+                    <select id="input-product-type" class="form-control" >
                         <option value="0" selected>Selecione o tipo do produto</option>
                         <option value="1">Livro</option>
                         <option value="2">Apostila</option>
@@ -35,7 +36,7 @@
                 <div class="form-group col-md-6">
                     <label for="input-product-curso">De qual curso?</label>
                     <span class="text-danger">*</span>
-                    <select id="input-product-curso" class="form-control">
+                    <select id="input-product-curso" class="form-control" >
                         <option value="0" selected>Meu curso</option>
                         <option value="1">Administração</option>
                         <option value="2">Análise e desenvolvimento de sistemas</option>
@@ -49,7 +50,7 @@
         <div class="form-group col-md-6">
             <label for="input-product-description">Descrição do produto</label>
             <span class="text-danger">*</span>
-            <textarea class="form-control" id="input-product-description" placeholder="Informe aqui a descrição do produto, contendo o máximo de detalhes que conseguir, tudo o que julgar ser relevante" required></textarea>
+            <textarea class="form-control is-invalid" id="input-product-description" placeholder="Informe aqui a descrição do produto, contendo o máximo de detalhes que conseguir, tudo o que julgar ser relevante" required></textarea>
             <small class="form-text text-muted">
                 Coloque também <i>palavras-chave</i> e <i>#hashtags</i> para que seu produto seja facilmente encontrado nas pesquisas de outras pessoas.
             </small>
@@ -59,7 +60,7 @@
         <div class="form-group col-md-6">
             <label for="input-product-delivery">Disponibilidade para entrega</label>
             <span class="text-danger">*</span>
-            <select id="input-product-delivery" class="form-control">
+            <select id="input-product-delivery" class="form-control" >
                 <option value="0" selected>Imediatamente</option>
                 <option value="1">De 1 à 2 dias</option>
                 <option value="2">Em uma semana</option>
@@ -75,7 +76,7 @@
                         Este produto é
                     </label>
                 </div>
-                <select class="custom-select" id="input-product-estado">
+                <select class="custom-select" id="input-product-estado" >
                     <option value="0" selected>Selecione o estado do produto</option>
                     <option value="1">novo</option>
                     <option value="2">semi-novo</option>
@@ -87,13 +88,13 @@
     
     <div class="form-row" id="div-product-payment-conditions">
         <div class="form-group col-md-3">
-            <label for="input-product-value-principal">Valor do produto</label>
+            <label id="label-inpur-value-principal"for="input-product-value-principal">Valor do produto</label>
             <span class="text-danger">*</span>
             <div class="input-group flex-nowrap">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="addon-wrapping">R$</span>
                 </div>
-                <input type="text" class="form-control" id="input-product-value-principal" placeholder="0.00" aria-describedby="addon-wrapping">
+                <input type="text" class="form-control" id="input-product-value-principal" onKeyPress="return(moeda(this,'.',',',event))" placeholder="0,00" >
             </div>
         </div>
         <div class="form-group col-md-3">
@@ -136,5 +137,8 @@
             </label>
         </div>
     </div>
-    <button type="submit" class="btn btn-lg btn-primary">Concluir</button>
+    <button type="button" onclick="validaForm();validaFormIsValid()" class="btn btn-lg btn-primary">Concluir</button>
 </form>
+
+
+<script type="text/javascript" src="/content/js/new_post/new_post.js"></script>
