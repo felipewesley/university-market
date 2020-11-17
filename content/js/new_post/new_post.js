@@ -71,31 +71,31 @@ function validaForm(){
 }
 
 function validaFormIsValid(){
-    if (document.getElementById('input-product-value-principal').value <> "") {
+    if (document.getElementById('input-product-value-principal').value != "") {
         document.getElementById("input-product-value-principal").className += " is-valid";
     }
-    if (document.getElementById('input-product-name').value <> "") {
+    if (document.getElementById('input-product-name').value != "") {
         document.getElementById("input-product-name").className += " is-valid";
     }
-    if (document.getElementById('input-product-type').value <> 0) {
+    if (document.getElementById('input-product-type').value != 0) {
         document.getElementById("input-product-type").className += " is-valid";
     }
-    if (document.getElementById('input-product-curso').value <> 0) {
+    if (document.getElementById('input-product-curso').value != 0) {
         document.getElementById("input-product-curso").className += " is-valid";
     }
-    if (document.getElementById('input-product-description').value <> "") {
+    if (document.getElementById('input-product-description').value != "") {
         document.getElementById("input-product-description").className += " is-valid";
     }
-    if (document.getElementById('input-product-delivery').value <> 0 ) {
+    if (document.getElementById('input-product-delivery').value != 0 ) {
         document.getElementById("input-product-delivery").className += " is-valid";
     }
-    if (document.getElementById('input-product-estado').value <> 0 ) {
+    if (document.getElementById('input-product-estado').value != 0 ) {
         document.getElementById("input-product-estado").className += " is-valid";
     }
-    if (document.getElementById('input-product-payment-type').value <> 0 ) {
+    if (document.getElementById('input-product-payment-type').value != 0 ) {
         document.getElementById("input-product-payment-type").className += " is-valid";
     }
-    if (document.getElementById('customFile').value <> 0 ) {
+    if (document.getElementById('customFile').value != 0 ) {
         document.getElementById("customFile").className += " is-valid";
     }
 
