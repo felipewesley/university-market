@@ -11,7 +11,14 @@ body{
 }
 
 
+ p{
+    color:red;
+    font-size: 15px;
+    font-style:initial;
+    font-family: sans-serif;
+    
 
+  }
 /* remove a linha dos links */
 a{
   text-decoration: none;

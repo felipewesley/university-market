@@ -4,18 +4,19 @@ require_once('bancoteste.php');
 
 class Login extends CI_Controller{
 
-	
+
 	public function fazerLogin() {
 
-		$this->load->view('login');
+		$this->load->university_market_page('login');
 	}
 	public function fazerCad() {
 
 		$this->load->view('cadastro');
 	}
-	public function Perfil($username) {
+	public function Perfil() {
 
-		$this->show_p($username);
+
+		$this->load->university_market_page('perfil');
 	}
 
 	public function conf_login() {
@@ -27,11 +28,16 @@ class Login extends CI_Controller{
 
 
 		//var_dump($user);
-		if ($user == TRUE && $this->usuario_model->setlogado($username)){
-			$this->Perfil($username);
+		if ($user == TRUE){
+			$this->session->set_userdata('username', $username);
+
+			//echo $this->session->userdata('username');
+
+			$this->Perfil();
 		}else{
 			//$this->session->set_flashdata('danger', 'Senha invalida!');
-			$this->load->view('login');		
+			$this->session->set_flashdata('danger', 'Usuario,senha ou email invalidos !');
+			$this->load->university_market_page('login');		
 		}
 			
 	}
@@ -49,19 +55,6 @@ class Login extends CI_Controller{
     	);   
     	$this->usuario_model->insere($dados);
 		$this->load->view('login');	
-	}
-
-	public function show_p($nome)
-	{
-		$this->load->model('Usuario_model');
-		$id = $this->Usuario_model->pegarlogado($nome);
-        //$usuarios = $this->Usuario_model->listaUsuarios($id);
-          //echo '<pre>';     
-          // print_r($usuarios);
-          // echo '</pre>';     
-       
-        //$data['usuario'] =  $usuarios;
-        //$this->load->view('perfil', $data);
 	}
 
 

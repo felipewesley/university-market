@@ -18,7 +18,7 @@ class Usuario_model extends CI_Model{
         return $this->db->insert('usuario', $data);
     }
 
-    public function setlogado($nome)
+   /* public function setlogado($nome)
     {
         $this->db->where('nome', $nome);
         $this->db->set('logado',1);
@@ -28,9 +28,9 @@ class Usuario_model extends CI_Model{
         }else{
             return false;
         }
-
-    }
-     public function pegarlogado($nome)
+   
+    }*/
+    /* public function pegarlogado($nome)
     {
         $this->db->select('id_usuario');
         $this->db->where('logado',1); 
@@ -41,10 +41,9 @@ class Usuario_model extends CI_Model{
             return false;
         }
 
-    }
+    }*/
 
-    public function deleta($id)
-    {
+    public function deleta($id){
         return $this->db->delete('usuario', ['id_usuario' => $id]);
     }
 
