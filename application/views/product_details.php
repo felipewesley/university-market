@@ -13,7 +13,8 @@
         </div>
         <div class="col-md-8">
             <div class="card-body">
-                <h5 class="card-title">Título do produto anunciado</h5>
+                <span class="h5 card-title">Título do produto anunciado</span>
+                <p class="text-secondary">Cod.: 12345678</p>
                 <p class="card-text">
                     Aqui deverá aparecer a descrição completa do produto cadastrado pelo usuário, inclusive com todas as opções adicionais como cores, tamanhos, tempo de uso ou eventuais defeitos que o produto apresente.
                 </p>
