@@ -6,6 +6,8 @@ class Home extends CI_Controller {
 	/**
 	 * Index Page for this controller.
 	 *
+	 * @method index() Index Page for this controller.
+	 * @return void
 	 * Maps to the following URL
 	 * 		http://example.com/index.php/welcome
 	 *	- or -
@@ -13,12 +15,7 @@ class Home extends CI_Controller {
 	 *	- or -
 	 * Since this controller is set as the default controller in
 	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-
 	public function index() {
 
 		$this->load->model("HomepageModel","homepage");
@@ -39,5 +36,20 @@ class Home extends CI_Controller {
 		$data['curso_especifico'] = $curso;
 		
 		$this->load->university_market_page('courses_list', $data);
+	}
+
+	public function teste() {
+
+		echo "hello world";
+		
+		$this->load->model("ProductModel", "product");
+
+		$data = $this->product->getProduct();
+
+		echo "<pre>";
+		print_r($data);
+		echo "</pre>";
+
+		return true;
 	}
 }

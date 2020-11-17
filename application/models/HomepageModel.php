@@ -1,6 +1,7 @@
 <?php
+defined('BASEPATH') OR exit('No direct script access allowed');
 /**
- * este arquivo é responsavel por conversar com o banco de dados
+ * @author Felipe Wesley
  */
 class HomepageModel extends CI_Model {
 
