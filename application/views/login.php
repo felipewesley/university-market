@@ -1,4 +1,4 @@
-<!--?php defined('BASEPATH') OR exit('No direct script access allowed'); ?-->
+
 <!DOCTYPE html>
 <head>
   <meta charset="UTF-8" />
@@ -8,10 +8,16 @@
 </head>
 <body>
   <div class="container" >
-    <a class="links" id="paracadastro"></a>
-    <a class="links" id="paralogin"></a>
-   
+
+    <?php if($this->session->flashdata('success')) :?>
+        <p ><?= $this->session->flashdata('success')?></p>
+      <?php endif ?>
+  
+      <?php if($this->session->flashdata('danger')) :?>
+        <p><?= $this->session->flashdata('danger')?></p>
+      <?php endif ?>
     <div class="content"> 
+      
 
       <!--FORMULÁRIO DE LOGIN-->
       <div id="login">
