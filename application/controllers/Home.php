@@ -38,18 +38,4 @@ class Home extends CI_Controller {
 		$this->load->university_market_page('courses_list', $data);
 	}
 
-	public function teste() {
-
-		echo "hello world";
-		
-		$this->load->model("ProductModel", "product");
-
-		$data = $this->product->getProduct();
-
-		echo "<pre>";
-		print_r($data);
-		echo "</pre>";
-
-		return true;
-	}
 }

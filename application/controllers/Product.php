@@ -4,18 +4,12 @@ class Product extends CI_Controller {
 
     public function getProduct($id = false) {
 
-        // $this->load->model("ProductModel", "product");
+        $this->load->model("ProductModel", "product");
 
         $data = [];
 
-        if ($id) {
-            
-            $data['product_id'] = $id;
-            $data['product_img_path'] = "/content/images/index/carousel/$id.jpg";
-            $this->load->university_market_page('product_details', $data);
-            return true;
-        }
+        $data['p'] = $this->product->getProduct($id);
 
-        $this->load->university_market_page('top_products', $data);
+        $this->load->university_market_page('product_details', $data);
     }
 }
