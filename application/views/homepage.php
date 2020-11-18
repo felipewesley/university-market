@@ -1,6 +1,6 @@
 <?php
 	define("CURSOS_QUANT_MIN", 8);
-	define("CURSOS_QUANT_MAX", 12);
+	define("CURSOS_QUANT_MAX", 16);
 	define("DEFAULT_COURSE_BG", "/content/images/layout/cursos_background/default.jpg");
 	define("DEFAULT_COURSES_TEXT_COLOR", "#000");
 	define("DEFAULT_COURSE_DESCRIPTION", "Materiais para o curso de ");
@@ -108,20 +108,20 @@
 				<div class="container-fluid">
 				
 					<div class="card-columns">
-						<?php for($index = CURSOS_QUANT_MIN ; $index < CURSOS_QUANT_MAX ; $index++) : ?>
+						<?php for($index_curso = CURSOS_QUANT_MIN ; $index_curso < CURSOS_QUANT_MAX ; $index_curso++) : ?>
 
-							<?php $curso_e = $cursos[$index]; ?>
+							<?php $curso_e = $cursos[$index_curso]; ?>
 
 							<div class="card card-curso" 
 							style="
-								background:url('<?=$c['bg_path']??DEFAULT_COURSE_BG;?>');
-								color:<?=$c['title_color']??DEFAULT_COURSES_TEXT_COLOR;?>;">
+								background:url('<?=$curso_e['bg_path']??DEFAULT_COURSE_BG;?>');
+								color:<?=$curso_e['title_color']??DEFAULT_COURSES_TEXT_COLOR;?>;">
 								<div class="card-body">
 									<h1 class="h2 curso-name">
 										<?=$curso_e['name'];?>
 									</h1>
-									<p class="card-text text-left curso-description" style="color:<?=$c['description_color']??DEFAULT_COURSES_TEXT_COLOR;?>">
-										<?=$curso_e['description']??DEFAULT_COURSE_DESCRIPTION." {$c['name']}.";?>
+									<p class="card-text text-left curso-description" style="color:<?=$curso_e['description_color']??DEFAULT_COURSES_TEXT_COLOR;?>">
+										<?=$curso_e['description']??DEFAULT_COURSE_DESCRIPTION." {$curso_e['name']}.";?>
 									</p>
 								</div>
 							</div>
