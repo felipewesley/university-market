@@ -78,16 +78,24 @@
             </div>
         </div>
         <form action="/search/results#search-divisor" id="form-search" method="get">
-            <div class="input-group input-group-lg mb-3 input-txt-search" id="input-group-search-lg">
-                <input type="text" class="form-control" name="q" placeholder="Pesquise aqui" aria-describedby="btn-search-lg" id="input-search-lg">
-                <div class="input-group-append">
-                    <button class="btn btn-primary" name="flag" value="true" type="submit" id="btn-search-lg">
-                        <i class="fa fa-search"></i> Buscar
-                    </button>
+            <div class="form-group mb-3" id="input-group-search-lg">
+                <div class="input-group input-group-lg mb-3 input-txt-search">
+                    <input type="text" class="form-control" name="q" placeholder="Pesquise aqui" aria-describedby="btn-search-lg" id="input-search-lg">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" name="flag" value="true" type="submit" id="btn-search-lg">
+                            <i class="fa fa-search"></i> Buscar
+                        </button>
+                    </div>
                 </div>
+                <small class="form-text text-muted search-small-obs">
+                    Procure também por palavras-chave, <i>#hashtags</i> e outros termos mais específicos para filtrar melhor a sua pesquisa.
+                </small>
             </div>
             <div class="form-group mb-3" id="input-group-search-sm">
                 <input class="form-control form-control-lg input-txt-search" name="q" type="text" placeholder="Pesquise aqui" id="input-search-sm">
+                <small class="form-text text-muted">
+                    Procure também por palavras-chave, <i>#hashtags</i> e outros termos mais específicos para filtrar melhor a sua pesquisa.
+                </small>
                 <button type="submit" name="flag" value="true" class="btn btn-primary btn-lg btn-block" id="btn-search-sm">
                     <i class="fa fa-search"></i> Buscar
                 </button>
