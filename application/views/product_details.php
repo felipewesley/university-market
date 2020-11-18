@@ -28,9 +28,9 @@
                         Frete a combinar
                     </li>
                     <li class="list-group-item">
-                        <?=$p['product_delivery_type'];?>
+                        <?=$p['delivery_desc'];?>
                     </li>
-                    <li class="list-group-item">
+                    <li class="list-group-item list-group-item-primary">
                         <span aria-value="<?=$p['product_situation'];?>">
                             <?=$p['situation_desc'];?>
                         </span>
@@ -40,10 +40,10 @@
                 <div class="div-product-value">
                     <div class="alert alert-success alert-product-value" role="alert">
                         <p>
-                            <?=$p['product_primary_pay_condition'];?>
-                            <span class="h3">R$ <?=$p['product_primary_value'];?></span>
+                            <?=$p['product_pay_condition'];?>
+                            <span class="h3">R$ <?=$p['product_value'];?></span>
                             <small class="text-muted pgto-obs">
-                                <?=$p['product_primary_pay_method'];?>
+                                <?=$p['payment_desc'];?>
                             </small>
                         </p>
                     </div>
