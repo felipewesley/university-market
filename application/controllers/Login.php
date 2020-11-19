@@ -52,8 +52,16 @@ class Login extends CI_Controller{
 	public function save_cad(){
 		
 		$this->load->model('usuario_model');
-		$data = $this->input->post('nasc_cad');
-		$this->session->set_userdata('nascimento', $data);
+
+		$nha = $this->input->post('senha_cad');
+		$ail = $this->input->post('email_cad');
+	 	$luar = $this->input->post('cel_cad');
+	 	$mento = $this->input->post('nasc_cad');
+
+	 	$this->session->set_userdata('senhau',$mento);
+	 	$this->session->set_userdata('emailu',$mento);
+	 	$this->session->set_userdata('celu',$mento);
+		$this->session->set_userdata('nascimento',$mento);
 
 		$dados = array(
         'nome' => $this->input->post('nome_cad'),
@@ -75,7 +83,7 @@ class Login extends CI_Controller{
         'senha' => $this->input->post('senha_atualizar'),
         'email' => $this->input->post('email_atualizar'),
         'telefone' => $this->input->post('telefone_atualizar'),
-        'nascimento' => $this->input->post('nascimento_atualizar'),
+        'nascimento' => $this->session->userdata('nascimento'),
     	);
     	//var_dump($dados);   
     	$result = $this->usuario_model->altera($dados);

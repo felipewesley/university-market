@@ -22,12 +22,11 @@ class Usuario_model extends CI_Model{
     {
         //$nome = $data['nome'];
         $user = $this->session->userdata('username');
-        $nasc = $this->session->userdata('nascimento');
         $this->db->where('nome', $user);
         $this->db->set('senha', $data['senha']);
         $this->db->set('email', $data['email']);
         $this->db->set('telefone', $data['telefone']);
-        $this->db->set('nascimento', $nasc);
+        $this->db->set('nascimento', $data['nascimento']);
         $query = $this->db->update('usuario');
         //var_dump($query);
         print_r($this->db->last_query());

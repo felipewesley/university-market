@@ -26,20 +26,20 @@
                 <label for="senha">
                      <p class="h5">Senha:</p>
                 </label>
-                <input type="password" class="form-control" name="senha_atualizar"  placeholder=<?= $data->senha?>>
+                <input type="password" class="form-control" name="senha_atualizar"  required="true" placeholder=<?= $data->senha?>>
                 </div>
                 <div class="form-group">
                 <label for="nome">
                     <p class="h5">Email:</p>
                 </label>
-                <input type="name" class="form-control" name="email_atualizar" placeholder=<?= $data->email?>>
+                <input type="name" class="form-control" name="email_atualizar" required="true" placeholder=<?= $data->email?>>
                 
                 </div>
                 <div class="form-group">
                 <label for="nome">
                     <p class="h5">Telefone:</p>
                 </label>
-                <input type="number" class="form-control" name="telefone_atualizar" placeholder=<?= $data->telefone?>>
+                <input type="number" class="form-control" name="telefone_atualizar" required="true" placeholder=<?= $data->telefone?>>
                 
                 </div>
                 <div class="form-group">
