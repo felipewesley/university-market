@@ -30,7 +30,7 @@
 
           <p> 
             <label for="email_login">Numero para Contato</label>
-            <input id="senha_login" name="cel_cad" required="required" type="number" autocomplete="off" /> 
+            <input id="senha_login" name="cel_cad" required="required" type="number" /> 
           </p>
           <p> 
             <label for="email_login">Data de nascimento</label>

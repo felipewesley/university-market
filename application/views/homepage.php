@@ -157,7 +157,7 @@
                 <h5 class="text-uppercase">Esta plataforma</h5>
                 <ul class="list-unstyled">
                     <li> <a href="#!">Sobre o University Market</a> </li>
-                    <li> <a href="/Login/Perfil">Seu Perfil</a> </li>
+                    <li> <a href="/Login/fazerLogin">Seu Perfil</a> </li>
                     <li> <a href="#!">Política de privacidade</a> </li>
                     <li> <a href="#!">Tratamento de dados</a> </li>
                     <li> <a href="#!">Dados do aplicativo</a> </li>

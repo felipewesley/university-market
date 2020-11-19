@@ -38,6 +38,7 @@ class Login extends CI_Controller{
 		//var_dump($user);
 		if ($user == TRUE){
 			$this->session->set_userdata('username', $username);
+
 			//echo $this->session->userdata('username');
 			$this->Perfil();
 		}else{
@@ -51,6 +52,8 @@ class Login extends CI_Controller{
 	public function save_cad(){
 		
 		$this->load->model('usuario_model');
+		$data = $this->input->post('nasc_cad');
+		$this->session->set_userdata('nascimento', $data);
 
 		$dados = array(
         'nome' => $this->input->post('nome_cad'),
@@ -61,6 +64,29 @@ class Login extends CI_Controller{
     	);   
     	$this->usuario_model->insere($dados);
 		$this->load->university_market_page('login');	
+	}
+
+	public function update_cad(){
+		
+		$this->load->model('usuario_model');
+
+		$dados = array(
+        'nome' => $this->input->post('nome_atualizar'),
+        'senha' => $this->input->post('senha_atualizar'),
+        'email' => $this->input->post('email_atualizar'),
+        'telefone' => $this->input->post('telefone_atualizar'),
+        'nascimento' => $this->input->post('nascimento_atualizar'),
+    	);
+    	//var_dump($dados);   
+    	$result = $this->usuario_model->altera($dados);
+    	//var_dump($result);
+    	
+    	if ($result === true) {
+    		$this->load->university_market_page('login');
+    	}else{
+    		echo "Update com erro ";
+			//$this->load->university_market_page('perfil');
+		}
 	}
 
 

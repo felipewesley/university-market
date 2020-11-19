@@ -18,15 +18,28 @@ class Usuario_model extends CI_Model{
         return $this->db->insert('usuario', $data);
     }
 
-    public function pegarlogado($nome){
-        $this->db->select('*'); 
-        $this->db->where('nome',$nome);
-        if($query = $this->db->get('usuario')){
-            $data['usuario'] = $query->result(); 
-            return $data;
+    public function altera($data)
+    {
+        //$nome = $data['nome'];
+        $user = $this->session->userdata('username');
+        $nasc = $this->session->userdata('nascimento');
+        $this->db->where('nome', $user);
+        $this->db->set('senha', $data['senha']);
+        $this->db->set('email', $data['email']);
+        $this->db->set('telefone', $data['telefone']);
+        $this->db->set('nascimento', $nasc);
+        $query = $this->db->update('usuario');
+        //var_dump($query);
+        print_r($this->db->last_query());
+        if(!empty($query)){
+            //var_dump($this->db->update('usuario')->result());
+            //var_dump($query);
+            return true;
         }else{
-            return false;   
+            return false;
         }
+
+        //return $this->db->update('usuario',$data, "nome = $nome");
     }
 
     public function deleta($id){
@@ -47,6 +60,17 @@ class Usuario_model extends CI_Model{
                     return false;
                 }
         }                   
+    }
+
+       public function pegarlogado($nome){
+        $this->db->select('*'); 
+        $this->db->where('nome',$nome);
+        if($query = $this->db->get('usuario')){
+            $data['usuario'] = $query->result(); 
+            return $data;
+        }else{
+            return false;   
+        }
     }
    
    

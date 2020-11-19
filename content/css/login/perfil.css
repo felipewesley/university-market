@@ -1,15 +1,20 @@
-body{
-    background-color:#ffffff;
-    color:rgb(0, 0, 0);
-    font-style:initial;
-    font-family: sans-serif;
-}
-h1{
-    color: black;
-}
-input{
-
+.container-main { 
+	padding: 10.5px; 
+	width: 500px; 
+	max-width: 100%; 
+	
 }
 
-
+.h5{
+	color: black;
+}
+.h3{
+	padding: 10.5px; 
+}
+.btn-primary{
+	border-radius: 5px;
+}
+.form-control{
+	border-radius: 10px;
+}
 
