@@ -104,7 +104,7 @@
     </div>
 
     
-    <?php if (is_null($search)) : ?>
+    <?php if (is_null($filters['search'])) : ?>
     
         <div class="alert alert-warning">
             <strong>Ops!</strong> Tivemos um problema com a sua pesquisa. 
@@ -120,23 +120,66 @@
             Exibindo resultados relevantes para você.
         </div>
 
-    <?php elseif ($search) : ?>
-
-        <div class="alert alert-success">
-            Exibindo resultados para "<strong><?=$content;?></strong>".
-            <small class="form-text text-muted">
-                Aproximadamente <?=rand(10,1500);?> resultados.
-            </small>
-        </div>
+    <?php elseif ($filters['search']) : ?>
 
         <p>
             Filtros aplicados:
-            <?php foreach ($filters as $key => $value) : ?>
+            <?php foreach ($filters['filters'] as $key => $value) : ?>
                 <span class="badge badge-primary" aria-value="<?=$value['value'];?>">
                     <?=$value['label'];?>
                 </span>
             <?php endforeach; ?>
         </p>
+
+        <div class="alert alert-success">
+            Exibindo resultados para "<strong><?=$filters['content'];?></strong>".
+            <small class="form-text text-muted">
+                Aproximadamente <?=count($results);?> resultado(s) encontrado(s).
+            </small>
+        </div>
+
+        <?php if (count($results) == 0) : ?>
+
+            <div class="alert alert-warning">
+                Infelizmente a sua pesquisa não retornou nenhum resultado <b>:(</b>
+                Mas você pode tentar novamente agora mesmo!
+                <small class="form-text text-muted">
+                    Tente <b>palavras-chave</b>, <b><i>#hashtags</i></b> ou <b>novos filtros</b> de busca <b>:)</b>
+                </small>
+            </div>
+
+        <?php else : ?>
+
+            <?php foreach($results as $result) : ?>
+
+                <div class="card" style="width: 18rem;">
+                    <img src="/content/images/layout/products/<?=$result->product_image_path;?>.jpg" class="card-img-top" alt="..." width="50">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <?=$result->product_name;?>
+                        </h5>
+                        <p class="card-text">
+                            <?=$result->product_description;?>
+                        </p>
+                        <?php foreach (explode(";",$result->product_hashtags) as $hashtag) : ?>
+                            <?php $color = stripos($filters['content'], $hashtag) !== false ? "success" : "secondary";?>
+                            <span class="badge badge-<?=$color;?>">
+                                #<?=$hashtag;?>
+                            </span>
+                        <?php endforeach; ?>
+                        <div class="alert alert-success text-center">
+                            <strong>
+                                R$ <?=number_format($result->product_value, 2, ",", ".");?>
+                            </strong>
+                        </div>
+                        <a href="/product/getProduct/<?=$result->product_id;?>" class="btn btn-block btn-primary">Ver produto</a>
+                    </div>
+                </div>
+
+            <?php endforeach; ?>
+
+        <?php endif; ?>
+
 
     <?php else : ?>
 

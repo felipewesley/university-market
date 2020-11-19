@@ -50,12 +50,15 @@ class SearchModel extends CI_Model {
 
                     switch (strtoupper($v[0])) {
                         case "VALOR":
+                            $key = "valor";
                             $label = "Todos os valores";
                         break;
                         case "CIDADE":
+                            $key = "cidade";
                             $label = "Todas as cidades";
                         break;
                         case "CURSO":
+                            $key = "curso";
                             $label = "Todos os cursos";
                         break;
                     }
@@ -63,18 +66,21 @@ class SearchModel extends CI_Model {
 
                     switch (strtoupper($v[0])) {
                         case "VALOR":
+                            $key = "valor";
                             $label = "Até R$ $v[1].00";
                         break;
                         case "CIDADE":
+                            $key = "cidade";
                             $label = "Cidade: $v[1]";
                         break;
                         case "CURSO":
+                            $key = "curso";
                             $label = "Cod.Curso: $v[1]";
                         break;
                     }
                 }
 
-                $data['filters'][] = array("label" => $label, "value" => $value);
+                $data['filters'][] = array("label" => $label, "key" => $key, "value" => $value);
             }
 
             return $data;
@@ -87,5 +93,48 @@ class SearchModel extends CI_Model {
             }
             return array('search' => false);
         }
+    }
+
+    public function get_products_with_filter($filters) {
+
+        $f = [];
+
+        foreach ($filters['filters'] as $filtro) {
+            $f[$filtro["key"]] = $filtro["value"];
+        }
+        
+        $f["content"] = $filters["content"];
+
+        $tables = [];
+        $tables[] = "tb_product";
+
+        foreach ($f as $key => $value) {
+
+            switch (strtoupper($key)) {
+
+                case "VALOR":
+                    if ($value == 0) break;
+                    $this->db->where("product_value <", number_format(intval($value), 2));
+                break;
+                case "CURSO":
+                    $this->db->where("product_course_id", $value);
+                    $this->db->join("tb_courses cursos", "cursos.course_id = tb_product.product_course_id");
+                break;
+                case "CONTENT":
+                    $str_like = "(product_name LIKE '%$value%' OR ";
+                    $str_like.= "product_description LIKE '%$value%' OR ";
+                    $str_like.= "product_hashtags LIKE '%$value%')";
+                    $this->db->where($str_like);
+                break;
+            }
+        }
+        $this->db->from(implode(",", $tables));
+        $result = $this->db->get();
+
+        // echo "<pre>";
+        // print_r($result->result());
+        // echo "</pre>";
+
+        return $result->result();
     }
 }
