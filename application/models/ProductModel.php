@@ -62,7 +62,8 @@ class ProductModel extends CI_Model {
         $arr_result = [];
         $arr_result["search_status"] = true;
 
-        foreach ((array) $result->result()[0] as $key => $value) {
+        $r = (array) $result->result()[0];
+        foreach ($r as $key => $value) {
 
             if ($key == "product_id") {
                 $arr_result["original_id"] = $value;
@@ -71,7 +72,7 @@ class ProductModel extends CI_Model {
             }
             if ($key == "product_image_path") {
                 
-                $extension = "jpg";
+                $extension = $r['product_image_extension'];
                 $arr_result[$key] = $this->get_image_path($value, $extension);
                 continue;
             }

@@ -97,6 +97,12 @@ class SearchModel extends CI_Model {
 
     public function get_products_with_filter($filters) {
 
+        if (isset($filters['search']) && $filters['search'] == false) {
+            return false;
+        }
+        if (!is_array($filters) || (is_array($filters) && count($filters) === 0)) {
+            return false;
+        }
         $f = [];
 
         foreach ($filters['filters'] as $filtro) {

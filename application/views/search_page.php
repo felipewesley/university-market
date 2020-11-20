@@ -150,33 +150,37 @@
 
         <?php else : ?>
 
-            <?php foreach($results as $result) : ?>
+            <div class="card-deck">
 
-                <div class="card" style="width: 18rem;">
-                    <img src="/content/images/layout/products/<?=$result->product_image_path;?>.jpg" class="card-img-top" alt="..." width="50">
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            <?=$result->product_name;?>
-                        </h5>
-                        <p class="card-text">
-                            <?=$result->product_description;?>
-                        </p>
-                        <?php foreach (explode(";",$result->product_hashtags) as $hashtag) : ?>
-                            <?php $color = stripos($filters['content'], $hashtag) !== false ? "success" : "secondary";?>
-                            <span class="badge badge-<?=$color;?>">
-                                #<?=$hashtag;?>
-                            </span>
-                        <?php endforeach; ?>
-                        <div class="alert alert-success text-center">
-                            <strong>
-                                R$ <?=number_format($result->product_value, 2, ",", ".");?>
-                            </strong>
+                <?php foreach($results as $result) : ?>
+
+                    <div class="card" style="width: 18rem;">
+                        <img src="/content/images/layout/products/<?=$result->product_image_path;?>.<?=$result->product_image_extension;?>" class="card-img-top img-prod-carousel" alt="image not found">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <?=$result->product_name;?>
+                            </h5>
+                            <p class="card-text">
+                                <?=substr($result->product_description, 0, 75)."...";?>
+                            </p>
+                            <?php foreach (explode(";",$result->product_hashtags) as $hashtag) : ?>
+                                <?php $color = stripos($filters['content'], $hashtag) !== false ? "success" : "secondary";?>
+                                <span class="badge badge-<?=$color;?>">
+                                    #<?=$hashtag;?>
+                                </span>
+                            <?php endforeach; ?>
+                            <div class="alert alert-success text-center">
+                                <strong>
+                                    R$ <?=number_format($result->product_value, 2, ",", ".");?>
+                                </strong>
+                            </div>
+                            <a href="/product/getProduct/<?=$result->product_id;?>" class="btn btn-block btn-primary">Ver produto</a>
                         </div>
-                        <a href="/product/getProduct/<?=$result->product_id;?>" class="btn btn-block btn-primary">Ver produto</a>
                     </div>
-                </div>
 
-            <?php endforeach; ?>
+                <?php endforeach; ?>
+            
+            </div>
 
         <?php endif; ?>
 

@@ -1,4 +1,5 @@
 <?php
+	define("MORE_TEXT", "...");
 	define("CURSOS_QUANT_MIN", 8);
 	define("CURSOS_QUANT_MAX", 16);
 	define("DEFAULT_COURSE_BG", "/content/images/layout/cursos_background/default.jpg");
@@ -30,25 +31,25 @@
 		<div id="carousel-example" class="carousel slide" data-ride="carousel">
 			<div class="carousel-inner row w-100 mx-auto" role="listbox">
 				
-				<?php for ($index = 1 ; $index <= 8 ; $index++) : ?>
+				<?php foreach ($carousel as $key => $prod) : ?>
 
-					<?php $active = ($index === 1) ? "active" : ""; ?>
+					<?php $active = ($key === 0) ? "active" : ""; ?>
 
 					<div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 <?=$active;?>">
-						<a href="/product/getProduct/<?=$index;?>" target="_self">
-							<img src="./content/images/index/carousel/<?=$index;?>.jpg" class="img-fluid mx-auto d-block" alt="img<?=$index;?>">
+						<a href="/product/getProduct/<?=$prod->product_id;?>" target="_self">
+							<img src="./content/images/layout/products/<?=$prod->product_image_path;?>.<?=$prod->product_image_extension;?>" class="img-fluid mx-auto d-block img-prod-carousel" alt="img-<?=$key;?>">
 						</a>
-						<p class="h5 carousel-item-title">Título do elemento <?=$index;?></p>
+						<p class="h5 carousel-item-title"><?=substr($prod->product_name, 0, 25).MORE_TEXT;?></p>
 						<p class="product-description text-justify">
-							Esta é uma pequena descrição do produto <b><?=$index;?></b> apresentado neste item de carousel. Aqui serão apresentadas breves informações do produto.
+							<?=substr($prod->product_description, 0, 150).MORE_TEXT;?>
 						</p>
 						<div class="alert alert-success text-center">
-							<strong class="h3"> $<?=rand(10,100);?>.<?=rand(0,9);?>0 </strong>
+							<strong class="h3"> R$ <?=number_format($prod->product_value, 2, ",", ".");?> </strong>
 						</div>
-						<button type="button" aria-valuenow="<?=$index;?>" class="btn btn-primary btn-block btn-ver-produto">Ver produto</button>
+						<button type="button" aria-valuenow="<?=$prod->product_id;?>" class="btn btn-primary btn-block btn-ver-produto">Ver produto</button>
 					</div>
 
-				<?php endfor; ?>
+				<?php endforeach; ?>
 			</div>
 			<a class="carousel-control-prev carousel-control-ico" href="#carousel-example" role="button" data-slide="prev">
 				<span class="carousel-control-prev-icon" aria-hidden="true"></span>

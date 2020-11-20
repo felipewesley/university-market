@@ -26,4 +26,16 @@ class HomepageModel extends CI_Model {
         return $arr;
     }
 
+    public function getCarouselProducts($quant) {
+
+        $this->db->from('tb_product');
+        $this->db->limit($quant);
+        $this->db->order_by('product_initial_date', 'DESC');
+        $result = $this->db->get();
+
+        // print_r($result->result());
+        
+        return $result->result();
+    }
+
 }

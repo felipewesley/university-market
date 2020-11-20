@@ -1,6 +1,11 @@
 .carousel-control-ico {
     color: #3e3e3e;
 }
+.img-prod-carousel {
+    width: 350px;
+    height: 170px;
+    /* resize: both; */
+}
 div.top-content .container-fluid div#carousel-example div[role="listbox"] div.active {
     /* border: solid 2px red; */
     color: #000;

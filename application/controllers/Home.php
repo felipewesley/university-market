@@ -18,9 +18,12 @@ class Home extends CI_Controller {
 	 */
 	public function index() {
 
+		define("MAX_CAROUSEL_PRODUCTS", 6);
+		
 		$this->load->model("HomepageModel","homepage");
 		
 		$data['cursos'] = $this->homepage->getCursos();
+		$data['carousel'] = $this->homepage->getCarouselProducts(MAX_CAROUSEL_PRODUCTS);
 
 		// Função que cria a página default da aplicação com cabeçalho e rodapé, 
 		// preenchendo o conteúdo com $view, contendo $data

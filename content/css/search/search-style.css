@@ -24,3 +24,12 @@ span#filter-valor-qualquer-valor:hover, #filter-problem-report:hover {
     transition: ease 0.25s;
     cursor: pointer;
 }
+.img-prod-carousel {
+    width: 250px;
+    height: 170px;
+    /* resize: both; */
+}
+.card {
+    max-width: 275px;
+    /* display: inline-block; */
+}
